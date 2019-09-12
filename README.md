@@ -1,13 +1,13 @@
-# Business_Pulse
+# Wiki_Bias
 
 # Introduction
-Business Pulse is a tool that recommends users investment opportunies based on activity observed in Wikipedia articles. For this project, I will use Wikipedia data captures trends in the world in a structured manner. Users can also observe trending topic in Wikipedia.
+Wiki_Bias is a tool to quantify the bias in of Wikipedia articles. I use Wikipedia to capture trends.
 
-Motivation
-In a chaotic world with many news sources, Wikipedia is actually updated by users around the world in a timely manner.
+# Motivation
+In a chaotic world with many news sources, Wikipedia is needs a metric to show the bias of its articles.
 
-What does my project do?
+# What does my project do?
 Supported Queries
 
-Data Source
+# Data Source
 ~30 GB Wikipedia?

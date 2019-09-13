@@ -10,5 +10,17 @@ In a chaotic world with information wars and different schools of thought, Wikip
 # What does my project do?
 Calculate different metrics for bias using articles references and edits.
 
+## Edit metrics
+- Number of edits.
+
+## Reference metrics
+- Diversity of references.
+- Number of references.
+- Percentage of references from main news sources (top 100 News providers).
+
 # Data Source
 ~30 GB Wikipedia?
+
+# Results
+
+Dashboard

@@ -6,8 +6,6 @@
 
 import sys
 import time
-import csv
-
 import logging
 import boto3
 from botocore.exceptions import ClientError
@@ -35,13 +33,16 @@ def upload_file(file_name, bucket, object_name=None):
     return True
 
 def main():
-    start_time = time.time()
+#     start_time = time.time()
     sys_arv = sys.argv
     file_name = sys.argv[1]
     bucket = sys.argv[2]
     object_name = sys.argv[3]
     upload_file(file_name, bucket, object_name)
+    end_time = time.time()
     print('File uploaded')
+#     elapsed = time.time() - start_time
+#     print('Loading elapsed time was {:5.4f}s'.format(elapsed))
 
 if __name__ == '__main__':
     main()

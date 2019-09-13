@@ -19,7 +19,7 @@ Calculate different metrics for bias using articles references and edits.
   - Percentage of references from main news sources (top 100 News providers).
 
 # Data Source
-~30 GB Wikipedia?
+~100 GB Wikipedia?
 
 # Results
 

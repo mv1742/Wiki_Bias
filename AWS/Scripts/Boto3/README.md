@@ -4,4 +4,7 @@
 [upload_file.py](https://github.com/mv1742/Wiki_Bias/new/master/AWS/Scripts/Boto3/upload_file.py)
 
 Run using the following command: 
-'''python3 uploadfile.py file_name bucket_name object_name'''
+```
+python3 uploadfile.py file_name bucket_name object_name
+```
+

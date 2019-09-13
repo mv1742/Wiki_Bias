@@ -4,7 +4,7 @@
 ## Script1
 ### Uploads a file to S3 bucket following the See [AWS S3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-uploading-files.html)
 
-[upload_file.py](https://github.com/mv1742/Wiki_Bias/blob/master/AWS/Scripts/Boto3/upload_file.py)
+[upload_file.py](https://github.com/mv1742/Wiki_Bias/blob/master/AWS/upload_file.py)
 
 Run using the following command: 
 ```

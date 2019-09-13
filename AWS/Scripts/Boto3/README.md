@@ -2,7 +2,7 @@
 ## Script1
 ### Uploads a file to S3 bucket
 
-[upload_file.py](https://github.com/mv1742/Wiki_Bias/new/master/AWS/Scripts/Boto3/upload_file.py)
+[upload_file.py](https://github.com/mv1742/Wiki_Bias/blob/master/AWS/Scripts/Boto3/upload_file.py)
 
 Run using the following command: 
 ```
@@ -11,5 +11,5 @@ python3 uploadfile.py file_name bucket_name object_name
 
 e.g.:
 ```
-https://github.com/mv1742/Wiki_Bias/blob/master/AWS/Scripts/Boto3/upload_file.py
+python3 uploadfile.py enwiki-20190901-pages-articles-multistream-index5.txt-p352690p565312 wikibuckets test_eng_wiki20190901-pages-multistream-index5.txt
 ```

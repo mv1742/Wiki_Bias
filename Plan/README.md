@@ -18,3 +18,5 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install-linux.html
 - Put Data in s3. 
 https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-uploading-files.html
+- Create postgreSQL database
+https://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html

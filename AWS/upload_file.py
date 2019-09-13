@@ -36,9 +36,7 @@ def upload_file(file_name, bucket, object_name=None):
 
 def main():
     start_time = time.time()
-    # Test the code for possible issues with Command_Line Input 
     sys_arv = sys.argv
-    # Read input folder locations
     file_name = sys.argv[1]
     bucket = sys.argv[2]
     object_name = sys.argv[3]

@@ -1,16 +1,7 @@
 # Planning
 
-# More Ideas
-## Add more metrics...?
-- Sentiment from Gdelt dataset
-If time allows, references will have a score derived from Gdelt dataset which provides sentiment analysis scores for each data source. Data sources will then be ranked from 0 - neutral sentiment, to -1, 1 (positive/negative).
-
--------------------
-
 # TASKS
 - Read from s3 with python put in Postgres [instructions]
-
-
 
 # DONE
 - Connect shh to EC2 Instance

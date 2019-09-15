@@ -9,7 +9,7 @@ If time allows, references will have a score derived from Gdelt dataset which pr
 
 # TASKS
 - Read from s3 with python put in Postgres [instructions]
-- Source: Wikidumps: https://dumps.wikimedia.org/fawiki/20190901/fawiki-20190901-pages-meta-history.xml.bz2
+
 
 
 # DONE

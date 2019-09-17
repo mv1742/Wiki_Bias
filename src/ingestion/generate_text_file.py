@@ -1,3 +1,5 @@
+# Script to generate url links to be downloaded from enwiki
+
 import requests
 
 # Parsing HTML

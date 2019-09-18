@@ -1,0 +1,2 @@
+https://dumps.wikimedia.org/fawiki/20190901/fawiki-20190901-pages-meta-history.xml.7z
+https://dumps.wikimedia.org/fawiki/20190901/fawiki-20190901-pages-meta-history.xml.bz2

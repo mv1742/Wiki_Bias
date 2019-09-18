@@ -1,0 +1,2 @@
+https://dumps.wikimedia.org/fawiki/20190901/fawiki-20190901-pages-articles-multistream.xml.bz2
+https://dumps.wikimedia.org/fawiki/20190901/fawiki-20190901-pages-articles.xml.bz2

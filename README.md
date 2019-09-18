@@ -23,4 +23,4 @@ Calculate different metrics for bias using articles references and edits.
 
 # Results
 
-Dashboard
+Dashboard.

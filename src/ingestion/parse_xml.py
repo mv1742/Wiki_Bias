@@ -6,7 +6,6 @@ from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 from pyspark.sql.functions import explode
 import psycopg2
-#import psycopg2
 '''
 Parses one XML file from S3 bucket
 to Postgres.

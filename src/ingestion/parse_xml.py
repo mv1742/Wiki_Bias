@@ -11,15 +11,6 @@ import psycopg2
 Parses one XML file from S3 bucket
 to TimescaleDB.
 '''
-#ACCESS_KEY = "AKIAZ4LCPHIH4IUQA5OB"
-#SECRET_KEY = "f8X.......+b"
-#ENCODED_SECRET_KEY = SECRET_KEY.replace("/", "%2F")
-#AWS_BUCKET_NAME = "wikibuckets"
-#MOUNT_NAME = "mounting_test"
-
-#dbutils.fs.mount("s3a://%s:%s@%s" % (ACCESS_KEY, ENCODED_SECRET_KEY, AWS_BUCKET_NAME), "/mnt/%s" % MOUNT_NAME)
-#display(dbutils.fs.ls("/mnt/%s" % MOUNT_NAME))
-
 def main(num):
 	spark = SparkSession.builder.getOrCreate()
 	df_raw = spark.read.format("xml") \

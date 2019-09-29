@@ -1,0 +1,213 @@
+Ivy Default Cache set to: /home/ubuntu/.ivy2/cache
+The jars for the packages stored in: /home/ubuntu/.ivy2/jars
+:: loading settings :: url = jar:file:/usr/local/spark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+com.databricks#spark-xml_2.11 added as a dependency
+org.postgresql#postgresql added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-4c7878cc-ce12-491f-959e-c8cf77e78ed5;1.0
+	confs: [default]
+	found com.databricks#spark-xml_2.11;0.6.0 in central
+	found commons-io#commons-io;2.6 in spark-list
+	found org.postgresql#postgresql;42.2.5 in central
+:: resolution report :: resolve 398ms :: artifacts dl 17ms
+	:: modules in use:
+	com.databricks#spark-xml_2.11;0.6.0 from central in [default]
+	commons-io#commons-io;2.6 from spark-list in [default]
+	org.postgresql#postgresql;42.2.5 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   0   |   0   |   0   ||   3   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-4c7878cc-ce12-491f-959e-c8cf77e78ed5
+	confs: [default]
+	0 artifacts copied, 3 already retrieved (0kB/9ms)
+2019-09-29 05:41:12 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2019-09-29 05:41:13 WARN  DependencyUtils:66 - Local jar /home/ubuntu/wiki_bias/src/process_reverts/postgresql-42.2.8.jar does not exist, skipping.
+2019-09-29 05:41:14 INFO  SparkContext:54 - Running Spark version 2.4.0
+2019-09-29 05:41:14 INFO  SparkContext:54 - Submitted application: Single_rev.py
+2019-09-29 05:41:14 INFO  SecurityManager:54 - Changing view acls to: ubuntu
+2019-09-29 05:41:14 INFO  SecurityManager:54 - Changing modify acls to: ubuntu
+2019-09-29 05:41:14 INFO  SecurityManager:54 - Changing view acls groups to: 
+2019-09-29 05:41:14 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2019-09-29 05:41:14 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ubuntu); groups with view permissions: Set(); users  with modify permissions: Set(ubuntu); groups with modify permissions: Set()
+2019-09-29 05:41:14 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 41858.
+2019-09-29 05:41:14 INFO  SparkEnv:54 - Registering MapOutputTracker
+2019-09-29 05:41:14 INFO  SparkEnv:54 - Registering BlockManagerMaster
+2019-09-29 05:41:14 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2019-09-29 05:41:14 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
+2019-09-29 05:41:14 INFO  DiskBlockManager:54 - Created local directory at /tmp/blockmgr-a2751d42-6c8c-4b9d-9791-0e4bab2bf4c7
+2019-09-29 05:41:14 INFO  MemoryStore:54 - MemoryStore started with capacity 366.3 MB
+2019-09-29 05:41:14 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
+2019-09-29 05:41:14 INFO  log:192 - Logging initialized @3812ms
+2019-09-29 05:41:14 INFO  Server:351 - jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2019-09-29 05:41:14 INFO  Server:419 - Started @3916ms
+2019-09-29 05:41:14 INFO  AbstractConnector:278 - Started ServerConnector@16c485fa{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2019-09-29 05:41:14 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4040.
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6bc1de72{/jobs,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@72f08c3{/jobs/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@36eec27d{/jobs/job,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1038fb57{/jobs/job/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6f2e8083{/stages,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2f135a31{/stages/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@915077d{/stages/stage,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@70e616d5{/stages/stage/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@51e9d95b{/stages/pool,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@a28a6c2{/stages/pool/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@47806cbd{/storage,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7909a26{/storage/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@18aca88e{/storage/rdd,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@57fd13ef{/storage/rdd/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@13dc6829{/environment,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@109e81de{/environment/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6d8bb39b{/executors,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@52d6a7ae{/executors/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@22bb00fd{/executors/threadDump,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@46cfe505{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7668812c{/static,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@52be2928{/,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@423183d6{/api,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@23488b2b{/jobs/job/kill,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@304a20c3{/stages/stage/kill,null,AVAILABLE,@Spark}
+2019-09-29 05:41:14 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://ec2-18-235-14-71.compute-1.amazonaws.com:4040
+2019-09-29 05:41:14 ERROR SparkContext:91 - Failed to add file:/home/ubuntu/wiki_bias/src/process_reverts/postgresql-42.2.8.jar to Spark environment
+java.io.FileNotFoundException: Jar /home/ubuntu/wiki_bias/src/process_reverts/postgresql-42.2.8.jar not found
+	at org.apache.spark.SparkContext.addJarFile$1(SparkContext.scala:1838)
+	at org.apache.spark.SparkContext.addJar(SparkContext.scala:1868)
+	at org.apache.spark.SparkContext$$anonfun$12.apply(SparkContext.scala:458)
+	at org.apache.spark.SparkContext$$anonfun$12.apply(SparkContext.scala:458)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:458)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:238)
+	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+2019-09-29 05:41:14 INFO  SparkContext:54 - Added JAR file:///home/ubuntu/.ivy2/jars/com.databricks_spark-xml_2.11-0.6.0.jar at spark://ip-10-0-0-12.ec2.internal:41858/jars/com.databricks_spark-xml_2.11-0.6.0.jar with timestamp 1569735674998
+2019-09-29 05:41:14 INFO  SparkContext:54 - Added JAR file:///home/ubuntu/.ivy2/jars/org.postgresql_postgresql-42.2.5.jar at spark://ip-10-0-0-12.ec2.internal:41858/jars/org.postgresql_postgresql-42.2.5.jar with timestamp 1569735674999
+2019-09-29 05:41:14 INFO  SparkContext:54 - Added JAR file:///home/ubuntu/.ivy2/jars/commons-io_commons-io-2.6.jar at spark://ip-10-0-0-12.ec2.internal:41858/jars/commons-io_commons-io-2.6.jar with timestamp 1569735674999
+2019-09-29 05:41:15 INFO  SparkContext:54 - Added file file:///home/ubuntu/.ivy2/jars/com.databricks_spark-xml_2.11-0.6.0.jar at spark://ip-10-0-0-12.ec2.internal:41858/files/com.databricks_spark-xml_2.11-0.6.0.jar with timestamp 1569735675045
+2019-09-29 05:41:15 INFO  Utils:54 - Copying /home/ubuntu/.ivy2/jars/com.databricks_spark-xml_2.11-0.6.0.jar to /tmp/spark-28612b23-3690-498b-82ae-ad08c558c1b7/userFiles-3793b96f-5c18-4a5d-8b3c-61ff637a09a5/com.databricks_spark-xml_2.11-0.6.0.jar
+2019-09-29 05:41:15 INFO  SparkContext:54 - Added file file:///home/ubuntu/.ivy2/jars/org.postgresql_postgresql-42.2.5.jar at spark://ip-10-0-0-12.ec2.internal:41858/files/org.postgresql_postgresql-42.2.5.jar with timestamp 1569735675068
+2019-09-29 05:41:15 INFO  Utils:54 - Copying /home/ubuntu/.ivy2/jars/org.postgresql_postgresql-42.2.5.jar to /tmp/spark-28612b23-3690-498b-82ae-ad08c558c1b7/userFiles-3793b96f-5c18-4a5d-8b3c-61ff637a09a5/org.postgresql_postgresql-42.2.5.jar
+2019-09-29 05:41:15 INFO  SparkContext:54 - Added file file:///home/ubuntu/.ivy2/jars/commons-io_commons-io-2.6.jar at spark://ip-10-0-0-12.ec2.internal:41858/files/commons-io_commons-io-2.6.jar with timestamp 1569735675077
+2019-09-29 05:41:15 INFO  Utils:54 - Copying /home/ubuntu/.ivy2/jars/commons-io_commons-io-2.6.jar to /tmp/spark-28612b23-3690-498b-82ae-ad08c558c1b7/userFiles-3793b96f-5c18-4a5d-8b3c-61ff637a09a5/commons-io_commons-io-2.6.jar
+2019-09-29 05:41:15 INFO  StandaloneAppClient$ClientEndpoint:54 - Connecting to master spark://ec2-18-235-14-71.compute-1.amazonaws.com:7077...
+2019-09-29 05:41:15 INFO  TransportClientFactory:267 - Successfully created connection to ec2-18-235-14-71.compute-1.amazonaws.com/10.0.0.12:7077 after 38 ms (0 ms spent in bootstraps)
+2019-09-29 05:41:15 INFO  StandaloneSchedulerBackend:54 - Connected to Spark cluster with app ID app-20190929054115-0040
+2019-09-29 05:41:15 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20190929054115-0040/0 on worker-20190926221205-10.0.0.8-38406 (10.0.0.8:38406) with 6 core(s)
+2019-09-29 05:41:15 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20190929054115-0040/0 on hostPort 10.0.0.8:38406 with 6 core(s), 1024.0 MB RAM
+2019-09-29 05:41:15 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20190929054115-0040/1 on worker-20190926221204-10.0.0.11-45048 (10.0.0.11:45048) with 6 core(s)
+2019-09-29 05:41:15 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20190929054115-0040/1 on hostPort 10.0.0.11:45048 with 6 core(s), 1024.0 MB RAM
+2019-09-29 05:41:15 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20190929054115-0040/2 on worker-20190926221206-10.0.0.5-35942 (10.0.0.5:35942) with 6 core(s)
+2019-09-29 05:41:15 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20190929054115-0040/2 on hostPort 10.0.0.5:35942 with 6 core(s), 1024.0 MB RAM
+2019-09-29 05:41:15 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42349.
+2019-09-29 05:41:15 INFO  NettyBlockTransferService:54 - Server created on ip-10-0-0-12.ec2.internal:42349
+2019-09-29 05:41:15 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2019-09-29 05:41:15 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20190929054115-0040/2 is now RUNNING
+2019-09-29 05:41:15 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20190929054115-0040/0 is now RUNNING
+2019-09-29 05:41:15 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20190929054115-0040/1 is now RUNNING
+2019-09-29 05:41:15 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, ip-10-0-0-12.ec2.internal, 42349, None)
+2019-09-29 05:41:15 INFO  BlockManagerMasterEndpoint:54 - Registering block manager ip-10-0-0-12.ec2.internal:42349 with 366.3 MB RAM, BlockManagerId(driver, ip-10-0-0-12.ec2.internal, 42349, None)
+2019-09-29 05:41:15 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, ip-10-0-0-12.ec2.internal, 42349, None)
+2019-09-29 05:41:15 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, ip-10-0-0-12.ec2.internal, 42349, None)
+2019-09-29 05:41:15 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@520e4cfb{/metrics/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:15 INFO  StandaloneSchedulerBackend:54 - SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+2019-09-29 05:41:16 INFO  SharedState:54 - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/ubuntu/wiki_bias/src/process_reverts/spark-warehouse/').
+2019-09-29 05:41:16 INFO  SharedState:54 - Warehouse path is 'file:/home/ubuntu/wiki_bias/src/process_reverts/spark-warehouse/'.
+2019-09-29 05:41:16 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2ffd3852{/SQL,null,AVAILABLE,@Spark}
+2019-09-29 05:41:16 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@77e8439d{/SQL/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:16 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@60915b0{/SQL/execution,null,AVAILABLE,@Spark}
+2019-09-29 05:41:16 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3e3f9f1e{/SQL/execution/json,null,AVAILABLE,@Spark}
+2019-09-29 05:41:16 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3b7fb915{/static/sql,null,AVAILABLE,@Spark}
+2019-09-29 05:41:16 INFO  StateStoreCoordinatorRef:54 - Registered StateStoreCoordinator endpoint
+2019-09-29 05:41:17 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.0.0.8:43122) with ID 0
+2019-09-29 05:41:17 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.0.0.5:44396) with ID 2
+2019-09-29 05:41:17 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.0.0.11:53238) with ID 1
+2019-09-29 05:41:17 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 10.0.0.8:34432 with 366.3 MB RAM, BlockManagerId(0, 10.0.0.8, 34432, None)
+2019-09-29 05:41:17 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 10.0.0.5:43832 with 366.3 MB RAM, BlockManagerId(2, 10.0.0.5, 43832, None)
+2019-09-29 05:41:17 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 10.0.0.11:38426 with 366.3 MB RAM, BlockManagerId(1, 10.0.0.11, 38426, None)
+2019-09-29 05:41:18 INFO  MemoryStore:54 - Block broadcast_0 stored as values in memory (estimated size 285.5 KB, free 366.0 MB)
+2019-09-29 05:41:18 INFO  MemoryStore:54 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.5 KB, free 366.0 MB)
+2019-09-29 05:41:18 INFO  BlockManagerInfo:54 - Added broadcast_0_piece0 in memory on ip-10-0-0-12.ec2.internal:42349 (size: 23.5 KB, free: 366.3 MB)
+2019-09-29 05:41:18 INFO  SparkContext:54 - Created broadcast 0 from newAPIHadoopFile at XmlFile.scala:46
+2019-09-29 05:41:18 INFO  FileInputFormat:283 - Total input paths to process : 1
+2019-09-29 05:41:18 INFO  SparkContext:54 - Starting job: fold at InferSchema.scala:112
+2019-09-29 05:41:18 INFO  DAGScheduler:54 - Got job 0 (fold at InferSchema.scala:112) with 399 output partitions
+2019-09-29 05:41:18 INFO  DAGScheduler:54 - Final stage: ResultStage 0 (fold at InferSchema.scala:112)
+2019-09-29 05:41:18 INFO  DAGScheduler:54 - Parents of final stage: List()
+2019-09-29 05:41:18 INFO  DAGScheduler:54 - Missing parents: List()
+2019-09-29 05:41:18 INFO  DAGScheduler:54 - Submitting ResultStage 0 (MapPartitionsRDD[2] at mapPartitions at InferSchema.scala:83), which has no missing parents
+2019-09-29 05:41:18 INFO  MemoryStore:54 - Block broadcast_1 stored as values in memory (estimated size 4.2 KB, free 366.0 MB)
+2019-09-29 05:41:18 INFO  MemoryStore:54 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.4 KB, free 366.0 MB)
+2019-09-29 05:41:18 INFO  BlockManagerInfo:54 - Added broadcast_1_piece0 in memory on ip-10-0-0-12.ec2.internal:42349 (size: 2.4 KB, free: 366.3 MB)
+2019-09-29 05:41:18 INFO  SparkContext:54 - Created broadcast 1 from broadcast at DAGScheduler.scala:1161
+2019-09-29 05:41:18 INFO  DAGScheduler:54 - Submitting 399 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at mapPartitions at InferSchema.scala:83) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+2019-09-29 05:41:18 INFO  TaskSchedulerImpl:54 - Adding task set 0.0 with 399 tasks
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 0.0 in stage 0.0 (TID 0, 10.0.0.11, executor 1, partition 0, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 1.0 in stage 0.0 (TID 1, 10.0.0.8, executor 0, partition 1, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 2.0 in stage 0.0 (TID 2, 10.0.0.5, executor 2, partition 2, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 3.0 in stage 0.0 (TID 3, 10.0.0.11, executor 1, partition 3, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 4.0 in stage 0.0 (TID 4, 10.0.0.8, executor 0, partition 4, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 5.0 in stage 0.0 (TID 5, 10.0.0.5, executor 2, partition 5, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 6.0 in stage 0.0 (TID 6, 10.0.0.11, executor 1, partition 6, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 7.0 in stage 0.0 (TID 7, 10.0.0.8, executor 0, partition 7, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 8.0 in stage 0.0 (TID 8, 10.0.0.5, executor 2, partition 8, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 9.0 in stage 0.0 (TID 9, 10.0.0.11, executor 1, partition 9, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 10.0 in stage 0.0 (TID 10, 10.0.0.8, executor 0, partition 10, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 11.0 in stage 0.0 (TID 11, 10.0.0.5, executor 2, partition 11, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 12.0 in stage 0.0 (TID 12, 10.0.0.11, executor 1, partition 12, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 13.0 in stage 0.0 (TID 13, 10.0.0.8, executor 0, partition 13, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 14.0 in stage 0.0 (TID 14, 10.0.0.5, executor 2, partition 14, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 15.0 in stage 0.0 (TID 15, 10.0.0.11, executor 1, partition 15, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 16.0 in stage 0.0 (TID 16, 10.0.0.8, executor 0, partition 16, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:18 INFO  TaskSetManager:54 - Starting task 17.0 in stage 0.0 (TID 17, 10.0.0.5, executor 2, partition 17, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:41:19 INFO  BlockManagerInfo:54 - Added broadcast_1_piece0 in memory on 10.0.0.8:34432 (size: 2.4 KB, free: 366.3 MB)
+2019-09-29 05:41:19 INFO  BlockManagerInfo:54 - Added broadcast_1_piece0 in memory on 10.0.0.11:38426 (size: 2.4 KB, free: 366.3 MB)
+2019-09-29 05:41:19 INFO  BlockManagerInfo:54 - Added broadcast_1_piece0 in memory on 10.0.0.5:43832 (size: 2.4 KB, free: 366.3 MB)
+2019-09-29 05:41:19 INFO  BlockManagerInfo:54 - Added broadcast_0_piece0 in memory on 10.0.0.5:43832 (size: 23.5 KB, free: 366.3 MB)
+2019-09-29 05:41:19 INFO  BlockManagerInfo:54 - Added broadcast_0_piece0 in memory on 10.0.0.8:34432 (size: 23.5 KB, free: 366.3 MB)
+2019-09-29 05:41:19 INFO  BlockManagerInfo:54 - Added broadcast_0_piece0 in memory on 10.0.0.11:38426 (size: 23.5 KB, free: 366.3 MB)
+2019-09-29 05:42:29 INFO  TaskSetManager:54 - Starting task 18.0 in stage 0.0 (TID 18, 10.0.0.8, executor 0, partition 18, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:29 INFO  TaskSetManager:54 - Finished task 16.0 in stage 0.0 (TID 16) in 71416 ms on 10.0.0.8 (executor 0) (1/399)
+2019-09-29 05:42:30 INFO  TaskSetManager:54 - Starting task 19.0 in stage 0.0 (TID 19, 10.0.0.8, executor 0, partition 19, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:30 INFO  TaskSetManager:54 - Finished task 1.0 in stage 0.0 (TID 1) in 71941 ms on 10.0.0.8 (executor 0) (2/399)
+2019-09-29 05:42:30 INFO  TaskSetManager:54 - Starting task 20.0 in stage 0.0 (TID 20, 10.0.0.5, executor 2, partition 20, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:30 INFO  TaskSetManager:54 - Finished task 2.0 in stage 0.0 (TID 2) in 72059 ms on 10.0.0.5 (executor 2) (3/399)
+2019-09-29 05:42:30 INFO  TaskSetManager:54 - Starting task 21.0 in stage 0.0 (TID 21, 10.0.0.5, executor 2, partition 21, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:30 INFO  TaskSetManager:54 - Finished task 17.0 in stage 0.0 (TID 17) in 72121 ms on 10.0.0.5 (executor 2) (4/399)
+2019-09-29 05:42:30 INFO  TaskSetManager:54 - Starting task 22.0 in stage 0.0 (TID 22, 10.0.0.5, executor 2, partition 22, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:30 INFO  TaskSetManager:54 - Finished task 8.0 in stage 0.0 (TID 8) in 72207 ms on 10.0.0.5 (executor 2) (5/399)
+2019-09-29 05:42:31 INFO  TaskSetManager:54 - Starting task 23.0 in stage 0.0 (TID 23, 10.0.0.8, executor 0, partition 23, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:31 INFO  TaskSetManager:54 - Finished task 4.0 in stage 0.0 (TID 4) in 72548 ms on 10.0.0.8 (executor 0) (6/399)
+2019-09-29 05:42:31 INFO  TaskSetManager:54 - Starting task 24.0 in stage 0.0 (TID 24, 10.0.0.8, executor 0, partition 24, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:31 INFO  TaskSetManager:54 - Finished task 13.0 in stage 0.0 (TID 13) in 73293 ms on 10.0.0.8 (executor 0) (7/399)
+2019-09-29 05:42:31 INFO  TaskSetManager:54 - Starting task 25.0 in stage 0.0 (TID 25, 10.0.0.8, executor 0, partition 25, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:31 INFO  TaskSetManager:54 - Finished task 7.0 in stage 0.0 (TID 7) in 73311 ms on 10.0.0.8 (executor 0) (8/399)
+2019-09-29 05:42:32 INFO  TaskSetManager:54 - Starting task 26.0 in stage 0.0 (TID 26, 10.0.0.5, executor 2, partition 26, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:32 INFO  TaskSetManager:54 - Finished task 14.0 in stage 0.0 (TID 14) in 73909 ms on 10.0.0.5 (executor 2) (9/399)
+2019-09-29 05:42:32 INFO  TaskSetManager:54 - Starting task 27.0 in stage 0.0 (TID 27, 10.0.0.5, executor 2, partition 27, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:32 INFO  TaskSetManager:54 - Finished task 5.0 in stage 0.0 (TID 5) in 73975 ms on 10.0.0.5 (executor 2) (10/399)
+2019-09-29 05:42:32 INFO  TaskSetManager:54 - Starting task 28.0 in stage 0.0 (TID 28, 10.0.0.8, executor 0, partition 28, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:32 INFO  TaskSetManager:54 - Finished task 10.0 in stage 0.0 (TID 10) in 74052 ms on 10.0.0.8 (executor 0) (11/399)
+2019-09-29 05:42:32 INFO  TaskSetManager:54 - Starting task 29.0 in stage 0.0 (TID 29, 10.0.0.11, executor 1, partition 29, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:32 INFO  TaskSetManager:54 - Finished task 12.0 in stage 0.0 (TID 12) in 74118 ms on 10.0.0.11 (executor 1) (12/399)
+2019-09-29 05:42:33 INFO  TaskSetManager:54 - Starting task 30.0 in stage 0.0 (TID 30, 10.0.0.11, executor 1, partition 30, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:33 INFO  TaskSetManager:54 - Finished task 6.0 in stage 0.0 (TID 6) in 74901 ms on 10.0.0.11 (executor 1) (13/399)
+2019-09-29 05:42:33 INFO  TaskSetManager:54 - Starting task 31.0 in stage 0.0 (TID 31, 10.0.0.5, executor 2, partition 31, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:33 INFO  TaskSetManager:54 - Finished task 11.0 in stage 0.0 (TID 11) in 75048 ms on 10.0.0.5 (executor 2) (14/399)
+2019-09-29 05:42:33 INFO  TaskSetManager:54 - Starting task 32.0 in stage 0.0 (TID 32, 10.0.0.11, executor 1, partition 32, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:33 INFO  TaskSetManager:54 - Finished task 9.0 in stage 0.0 (TID 9) in 75113 ms on 10.0.0.11 (executor 1) (15/399)
+2019-09-29 05:42:34 INFO  TaskSetManager:54 - Starting task 33.0 in stage 0.0 (TID 33, 10.0.0.11, executor 1, partition 33, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:34 INFO  TaskSetManager:54 - Finished task 15.0 in stage 0.0 (TID 15) in 75620 ms on 10.0.0.11 (executor 1) (16/399)
+2019-09-29 05:42:34 INFO  TaskSetManager:54 - Starting task 34.0 in stage 0.0 (TID 34, 10.0.0.11, executor 1, partition 34, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:34 INFO  TaskSetManager:54 - Finished task 0.0 in stage 0.0 (TID 0) in 76233 ms on 10.0.0.11 (executor 1) (17/399)
+2019-09-29 05:42:36 INFO  TaskSetManager:54 - Starting task 35.0 in stage 0.0 (TID 35, 10.0.0.11, executor 1, partition 35, PROCESS_LOCAL, 7967 bytes)
+2019-09-29 05:42:36 INFO  TaskSetManager:54 - Finished task 3.0 in stage 0.0 (TID 3) in 78256 ms on 10.0.0.11 (executor 1) (18/399)

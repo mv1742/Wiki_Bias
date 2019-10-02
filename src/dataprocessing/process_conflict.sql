@@ -36,3 +36,15 @@ SELECT t.id, t.entity_title, ratio CTID FROM public.s2conflict t
 SELECT t.id, t.entity_title, ratio CTID FROM public.s2conflict t
      WHERE ratio IS NOT NULL GROUP BY id, entity_title, ratio ORDER BY ratio DESC
      LIMIT 501
+
+             CREATE TABLE domains AS SELECT *, LEFT(SUBSTRING(url, 
+       (CASE WHEN CHARINDEX('//',url)=0 
+            THEN 5 
+            ELSE  CHARINDEX('//',url) + 2
+            END), 35),
+       (CASE 
+       WHEN CHARINDEX('/', SUBSTRING(url, CHARINDEX('//', url) + 2, 35))=0 
+       THEN LEN(url) 
+       else CHARINDEX('/', SUBSTRING(url, CHARINDEX('//', url) + 2, 35))- 1
+       END)
+       ) AS 'Domain' FROM s2conflict_urls;

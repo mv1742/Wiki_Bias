@@ -1,13 +1,16 @@
 # 1. s2conflict_urls
-
 EXPLAIN ANALYZE CREATE table s2conflict_urls AS SELECT * FROM refs_cleaned_url LEFT JOIN conflict ON(refs_cleaned_url.id=conflict.entity_id)
 ORDER BY ratio;
 
-
 # 2. Table Groupby_Article  DONE
+EXPLAIN ANALYZE CREATE table Groupby_Article AS SELECT id, entity_title, ratio, reverts, nofedits FROM s2conflict 
+     WHERE ratio IS NOT NULL GROUP BY id, entity_title, ratio, reverts, nofedits ORDER BY reverts DESC;
 
-EXPLAIN ANALYZE CREATE table Groupby_Article AS SELECT id, entity_title, ratio, reverted, nofedits FROM s2conflict 
-     WHERE ratio IS NOT NULL GROUP BY id, entity_title, ratio, reverted, nofedits ORDER BY reverted DESC;
+# Filter Relevant edits
+# s2c_large_edits
+
+EXPLAIN ANALYZE CREATE table Groupby_Article AS SELECT id, entity_title, ratio, reverts, nofedits FROM s2c_large_edits 
+     WHERE ratio IS NOT NULL GROUP BY id, entity_title, ratio, reverts, nofedits ORDER BY reverts DESC;
 
 # 3. Table URLCOUNT
 #	A. Extract URL
@@ -47,9 +50,9 @@ ALL: SELECT 15270784, ABOVE REV AVERAGE: SELECT 1947902.
 
 s2c_large_edits 
 SELECT round(AVG(ratio)) as avg, MIN(ratio), MAX(ratio) FROM s2c_large_edits;
-        avg         |         min         |        max        |    stddev_samp     |       stddev       |     stddev_pop
---------------------+---------------------+-------------------+--------------------+--------------------+--------------------
- 0.0955473907965123 | 0.00393111194309247 | 0.776699029126214 | 0.0516400146363824 | 0.0516400146363824 | 0.0516400013810899
+#        avg         |         min         |        max        |    stddev_samp     |       stddev       |     stddev_pop
+#--------------------+---------------------+-------------------+--------------------+--------------------+--------------------
+# 0.0955473907965123 | 0.00393111194309247 | 0.776699029126214 | 0.0516400146363824 | 0.0516400146363824 | 0.0516400013810899
 
 
 # FILTER URLS LOWER_BOUND_RATIO

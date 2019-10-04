@@ -20,10 +20,11 @@ Calculate different metrics for bias using articles references and edits.
 
 # Data Source
 ~100 GB Wikipedia?
+Use English Wikipedia 'meta-data' datadumps from [datadumps.wikipedia.org/enwiki]
 
 Read more about the Wikipedia dump documentation [here](https://en.wikipedia.org/wiki/Wikipedia:Database_download).
 See all available datasets [here](https://dumps.wikimedia.org/backup-index.html).
 
 # Results
 
-Dashboard
+Dashboard.

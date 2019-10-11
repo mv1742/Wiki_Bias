@@ -40,7 +40,7 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 
 # Results
 
-Go to dashboard [dataangel.me](http://dataangel.me).
+Go to dashboard [dataangel.me](http://dataangel.me/8050).
 
 
 ## Repo directory structure

@@ -1,4 +1,4 @@
-# Wiki_Bias
+# Source to Conflict
 
 ![Python](https://img.shields.io/badge/Python-3.7-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
 ![Flask](https://img.shields.io/badge/Flask-1.0.2-blue.svg?longCache=true&logo=flask&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
@@ -11,22 +11,20 @@
 
 
 # Introduction
-Wiki_Bias is a tool to quantify the bias in of Wikipedia articles.
+Source to Conflict is a tool to quantify the quality in of references in Wikipedia articles.
 
 # Motivation
-Wikipedia ia a convenient platform to access information.
-In a chaotic world with information wars and different schools of thought, Wikipedia needs a metric to quantify the bias of its articles.
+- Wikipedia needs a metric to quantify the bias of its articles.
+- Understand behaviours in crowdsourcing platforms like Wikipedia
+- Identify conflictive sources of information
+- Evaluate quality of article references
 
 # What does my project do?
 Calculate different metrics for bias using articles references and edits.
 
-1. Edit metrics
-  - Number of edits.
+Identify which metrics lead to more conflict. Conflict is defined by number of reverted articles. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots.
 
-2. Reference metrics
-  - Diversity of references.
-  - Number of references.
-  - Percentage of references from main news sources (top 100 News providers).
+# Pipeline
 
 # Data Source
 ~100 GB Wikipedia?
@@ -37,4 +35,4 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 
 # Results
 
-Dashboard.
+Go to dashboard [dataangel.me](http://dataangel.me).

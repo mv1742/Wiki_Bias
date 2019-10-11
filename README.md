@@ -13,10 +13,11 @@
 ## Manrique Vargas (MV), mv1742@nyu.edu
 
 1. [Introduction](README.md#Report)
-1. [Repo-directory-structure](README.md#Repo-directory-structure)
 1. [Motivation](README.md#Motivation)
 1. [Pipeline](README.md#Pipeline)
 1. [Results](README.md#Results)
+1. [Repo-directory-structure](README.md#Repo-directory-structure)
+
 
 # Introduction
 Source to Conflict is a tool to quantify the quality in of references in Wikipedia articles. I calculate different metrics for bias and identify which metrics lead to more conflict. Conflict is defined by number of reverted articles. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots.
@@ -26,6 +27,21 @@ Source to Conflict is a tool to quantify the quality in of references in Wikiped
 - Understand behaviours in crowdsourcing platforms like Wikipedia
 - Identify conflictive sources of information
 - Evaluate quality of article references
+
+# Pipeline
+![Pipeline.png](https://github.com/mv1742/Wiki_Bias/blob/master/Images/Pipeline.png)
+
+# Data Source
+~500 GB Wikipedia
+Use English Wikipedia 'meta-stub' and 'meta-current' datadumps from [datadumps.wikipedia.org/enwiki]
+
+Read more about the Wikipedia dump documentation [here](https://en.wikipedia.org/wiki/Wikipedia:Database_download).
+See all available datasets [here](https://dumps.wikimedia.org/backup-index.html).
+
+# Results
+
+Go to dashboard [dataangel.me](http://dataangel.me).
+
 
 ## Repo directory structure
 
@@ -74,16 +90,3 @@ The directory structure looks like this:
             ├── enwiki_articles_multistream.txt
             └── enwiki_meta_history.txt
 ```
-# Pipeline
-![Pipeline.png](https://github.com/mv1742/Wiki_Bias/blob/master/Images/Pipeline.png)
-
-# Data Source
-~500 GB Wikipedia
-Use English Wikipedia 'meta-stub' and 'meta-current' datadumps from [datadumps.wikipedia.org/enwiki]
-
-Read more about the Wikipedia dump documentation [here](https://en.wikipedia.org/wiki/Wikipedia:Database_download).
-See all available datasets [here](https://dumps.wikimedia.org/backup-index.html).
-
-# Results
-
-Go to dashboard [dataangel.me](http://dataangel.me).

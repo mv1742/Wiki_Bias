@@ -26,7 +26,7 @@ Source to Conflict is a tool to quantify the quality in of references in Wikiped
 - Evaluate quality of article references
 
 # Pipeline
-![pipeline.png](https://www.github.com/mv1742/Wiki_Bias/Images/Pipeline.png)
+![Pipeline.png](https://github.com/mv1742/Wiki_Bias/Images/Pipeline.png)
 
 # Data Source
 ~500 GB Wikipedia

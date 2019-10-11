@@ -9,6 +9,8 @@
 ![Psycopg2-Binary](https://img.shields.io/badge/Psycopg2--Binary-v2.7.7-red.svg?longCache=true&style=flat-square&logo=PostgreSQL&logoColor=white&colorA=4c566a&colorB=bf616a)
 ![Flask-SQLAlchemy](https://img.shields.io/badge/Flask--SQLAlchemy-2.3.2-red.svg?longCache=true&style=flat-square&logo=scala&logoColor=white&colorA=4c566a&colorB=bf616a)
 
+## Insight Data Engineering
+## Manrique Vargas (MV), mv1742@nyu.edu
 
 1. [Introduction](README.md#Report)
 1. [Repo-directory-structure](README.md#Repo-directory-structure)
@@ -25,6 +27,53 @@ Source to Conflict is a tool to quantify the quality in of references in Wikiped
 - Identify conflictive sources of information
 - Evaluate quality of article references
 
+## Repo directory structure
+
+The directory structure looks like this:
+```
+├── README.md
+└── src
+    ├── Flask
+    │   ├── Procfile
+    │   ├── README.md
+    │   ├── __pycache__
+    │   │   └── ldacomplaints.cpython-36.pyc
+    │   ├── app.py
+    │   ├── app_mod.py
+    │   ├── ldacomplaints.py
+    │   ├── plotlydash-flask-tutorial
+    │   ├── requirements.txt
+    │   └── wordcloud_matplotlib.py
+    ├── analytics
+    │   ├── add_pageviews.sql
+    │   └── wiki_analytics.sql
+    ├── dataprocessing
+    │   ├── README.md
+    │   ├── export2postgres.py
+    │   ├── merge
+    │   │   └── merge.py
+    │   ├── parse_xml.py
+    │   ├── process_conflict.sql
+    │   ├── process_refs
+    │   │   ├── README.md
+    │   │   ├── Single_ref.py
+    │   │   ├── load_pickle.py
+    │   │   ├── nohup.out
+    │   │   ├── postgresql-42.2.8.jar
+    │   └── process_reverts
+    │       ├── Arts_revs.py
+    │       ├── README.md
+    │       ├── Single_rev.py
+    │       ├── nohup.out
+    │       └── run.sh
+    └── ingestion
+        ├── README.md
+        ├── download.sh
+        ├── generate_text_file.py
+        └── text_files_download
+            ├── enwiki_articles_multistream.txt
+            └── enwiki_meta_history.txt
+```
 # Pipeline
 ![Pipeline.png](https://github.com/mv1742/Wiki_Bias/blob/master/Images/Pipeline.png)
 

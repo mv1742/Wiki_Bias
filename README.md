@@ -10,8 +10,16 @@
 ![Flask-SQLAlchemy](https://img.shields.io/badge/Flask--SQLAlchemy-2.3.2-red.svg?longCache=true&style=flat-square&logo=scala&logoColor=white&colorA=4c566a&colorB=bf616a)
 
 
+1. [Introduction](README.md#Website)
+1. [Motivation](README.md#Report)
+1. [Repo directory structure](README.md#Repo-directory-structure)
+1. [Abstract](README.md#Abstract)
+1. [Acknowledgements](README.md#Acknowledgements)
+
+![ A $10 Raspberry Pi Zero is a fully-functional wifi-equipped computer capable of retrieving its location. ](https://static1.squarespace.com/static/59948729a803bbad877d588e/t/5997b872f14aa1178c60949c/1503115399348/raspberry-pi-zero-w-wireless-256x256.png?format=1500w)
+
 # Introduction
-Source to Conflict is a tool to quantify the quality in of references in Wikipedia articles.
+Source to Conflict is a tool to quantify the quality in of references in Wikipedia articles. I calculate different metrics for bias and identify which metrics lead to more conflict. Conflict is defined by number of reverted articles. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots.
 
 # Motivation
 - Wikipedia needs a metric to quantify the bias of its articles.
@@ -19,12 +27,8 @@ Source to Conflict is a tool to quantify the quality in of references in Wikiped
 - Identify conflictive sources of information
 - Evaluate quality of article references
 
-# What does my project do?
-Calculate different metrics for bias using articles references and edits.
-
-Identify which metrics lead to more conflict. Conflict is defined by number of reverted articles. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots.
-
 # Pipeline
+![image]()
 
 # Data Source
 ~100 GB Wikipedia?

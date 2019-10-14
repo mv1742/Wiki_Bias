@@ -20,7 +20,7 @@
 
 
 # Introduction
-Source to Conflict is a tool to quantify the quality in of references in Wikipedia articles. I calculate different metrics for bias and identify which metrics lead to more conflict. Conflict is defined by number of reverted articles. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots.
+Source to Conflict is a tool to analyze how references and other features in Wikipedia articles affect the edit history. I calculate different metrics for bias and identify which metrics lead to more edits. Conflict is defined by number of reverted articles. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots.
 
 # Motivation
 - Wikipedia needs a metric to quantify the bias of its articles.

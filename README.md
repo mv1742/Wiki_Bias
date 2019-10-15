@@ -74,13 +74,10 @@ The directory structure looks like this:
     │   │   ├── README.md
     │   │   ├── Single_ref.py
     │   │   ├── load_pickle.py
-    │   │   ├── nohup.out
-    │   │   ├── postgresql-42.2.8.jar
     │   └── process_reverts
     │       ├── Arts_revs.py
     │       ├── README.md
     │       ├── Single_rev.py
-    │       ├── nohup.out
     │       └── run.sh
     └── ingestion
         ├── README.md

@@ -20,14 +20,11 @@ import dash_html_components as html
 import pandas as pd
 from .layout import html_layout
 from dash import Dash
-# user = os.environ["POSTGRES_USER"]
-# host = os.environ["POSTGRES_HOSTNAME"]
-# password = os.environ["POSTGRES_PASSWORD"]
-# dbname = os.environ["POSTGRES_DBNAME"]
-dbname='postgres'
-host='ec2-3-222-98-195.compute-1.amazonaws.com'
-user='postgres'
-password='Sapr2019'
+user = os.environ["POSTGRES_USER"]
+host = os.environ["POSTGRES_HOSTNAME"]
+password = os.environ["POSTGRES_PASSWORD"]
+dbname = os.environ["POSTGRES_DBNAME"]
+
 # Settings for psycopg Postgres connector
 con = psycopg2.connect(database=dbname, user=user, password=password, host=host)
 
@@ -38,7 +35,6 @@ DATA_PATH = pathlib.Path(__file__).parent.resolve()
 
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 filename = "customer_complaints_narrative_sample.csv"
-# PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 
 """
 #  Helpful functions
@@ -328,52 +324,17 @@ def Add_Dash(server):
                     external_stylesheets=external_stylesheets,
                     external_scripts=external_scripts,
                     routes_pathname_prefix='/word_cloud/')
-    # dash_app = Dash(__name__,requests_pathname_prefix='/lda/', external_stylesheets=[dbc.themes.BOOTSTRAP])
-    # dash_app.layout = html.Div(children=[navbar, body])
+
 
     dash_app.index_string = html_layout
     """
     #  Page layout and contents
     """
 
-    # df = pd.read_csv(filename, header=0, skiprows=lambda i: i % n != 0)
-
-
-
-
-    # sql_query_5 = "SELECT ratio, title, host FROM urls_article_title_all where title is not null ORDER BY reverts DESC LIMIT 200;"
-    # dict_of_tables['5'] = pd.read_sql_query(sql_query_5, con)
-    # df_tables = dict_of_tables['5'].rename(columns={'reverts': 'Date received',
-    #                                                 'title': 'Consumer complaint narrative',
-    #                                                 'host': 'Company'})
-    # Date received,Consumer complaint narrative,Company
-
-    # def Add_Dash(server):
 
     global_df = load_data()
 
 
-    # navbar = dbc.Navbar(
-    #     children=[
-    #         html.A(
-    #             # Use row and col to control vertical alignment of logo / brand
-    #             dbc.Row(
-    #                 [
-    #                     # dbc.Col(html.Img(src=PLOTLY_LOGO, height="30px")),
-    #                     dbc.Col(
-    #                         dbc.NavbarBrand("Host Domain", className="ml-2")
-    #                     ),
-    #                 ],
-    #                 align="center",
-    #                 no_gutters=True,
-    #             ),
-    #             href="https://plot.ly",
-    #         )
-    #     ],
-    #     color="dark",
-    #     dark=True,
-    #     sticky="top",
-    # )
 
     left_column = dbc.Jumbotron(
         [
@@ -522,12 +483,8 @@ def Add_Dash(server):
         print(max_date, min_date)
         print('4/df_tables.ratio.max() --------------------- \n\n\n\n\n',df_tables['Date received'].max())
         print(make_marks(min_date, max_date), int(min_date), max(min_date), 1, [int(min_date), int(max_date)])
-        # {2012: '2012', 2013: '2013', 2014: '2014', 2015: '2015', 2016: '2016', 2017: '2017'} 2012 2 1 [2012, 2017]
         return (
-            # make_marks(min_date, max_date),
-            # int(min_date),
-            # int(max_date),
-            # 4/df_tables['Date received'].max(),
+
             [int(min_date), int(max_date)],
         )
 
@@ -539,93 +496,6 @@ def Add_Dash(server):
         # print("repopulating dropdown")
         return make_options(values)
 
-    # @dash_app.callback(
-    #     Output("bank-sample", "figure"),
-    #     [Input("n-selection-slider", "value"), Input("time-window-slider", "value")],
-    # )
-    # def set_n(n_value, time_values):
-    #     n = float(n_value / 100)
-    #     print("redrawing bank-sample...")
-    #     print("n set to: ", n)
-    #     print("time_values: --------------------\n\n\n\n\n ", time_values)
-    #     print("bank-sample: TODO USE THE TIME VALUES TO LIMIT THE DATASET")
-    #     sample_size = 20
-    #     local_df = sample_data(global_df, n)
-    #     values_sample, counts_sample = calculate_sample(local_df, sample_size, time_values)
-    #     print("redrawing bank-sample...done")
-    #
-    #     data = [
-    #         {
-    #             "x": values_sample,
-    #             "y": counts_sample,
-    #             "text": values_sample,
-    #             "textposition": "auto",
-    #             "type": "bar",
-    #             "name": "",
-    #         }
-    #     ]
-    #     layout = {
-    #         "autosize": False,
-    #         "margin": dict(t=10, b=10, l=30, r=0, pad=4),
-    #         "xaxis": {"showticklabels": False},
-    #     }
-    #
-    #     return {"data": data, "layout": layout}
-
-    # @dash_app.callback(
-    #     [
-    #         Output("lda-table", "data"),
-    #         Output("lda-table", "columns"),
-    #         Output("tsne-lda", "figure"),
-    #     ],
-    #     [
-    #         # Input("bank-sample", "clickData"),
-    #         Input("bank-drop", "value"),
-    #         Input("time-window-slider", "value"),
-    #         Input("n-selection-slider", "value"),
-    #     ],
-    # )
-    # def update_lda_table(value_drop, time_values, n_selection):
-    #     if value_drop:
-    #         selected_bank = value_drop
-    #         print(selected_bank)
-    #     # elif bank_click:
-    #     #     selected_bank = bank_click["points"][0]["x"]
-    #     else:
-    #         return [[], [], {}]
-    #
-    #     print("redrawing lda table...")
-    #     n = float(n_selection / 100)
-    #     print("got time window:", str(time_values))
-    #     print("got n_selection:", str(n_selection), str(n))
-    #
-    #     # sample the dataset according to the slider
-    #     local_df = load_data_all(selected_bank)
-    #     if time_values is not None:
-    #         # local_df["Date received"] = local_df["Date received"]
-    #         local_df = local_df[
-    #             (local_df["Date received"] >= time_values[0])
-    #             & (
-    #                     local_df["Date received"]
-    #                     <= time_values[1])
-    #             ]
-    #     local_df = local_df[local_df["Company"] == selected_bank]
-    #     add_stopwords(selected_bank)
-    #     complaints_text = list(local_df['Consumer complaint narrative'].dropna().values)
-    #     if len(complaints_text) <= 10:  # we cannot do LDA on less than 11 complaints
-    #         return [[], [], {}]
-    #     tsne_lda, lda_model, topic_num, df_dominant_topic = lda_analysis(
-    #         complaints_text, list(STOPWORDS)
-    #     )
-    #
-    #     lda_scatter_figure = populate_lda_scatter(
-    #         tsne_lda, lda_model, topic_num, df_dominant_topic
-    #     )
-    #
-    #     columns = [{"name": i, "id": i} for i in df_dominant_topic.columns]
-    #     data = df_dominant_topic.to_dict("records")
-    #
-    #     return (data, columns, lda_scatter_figure)
 
     @dash_app.callback(
         [Output("bank-wordcloud", "figure"), Output("frequency_figure", "figure")],
@@ -671,42 +541,7 @@ def Add_Dash(server):
         print("redrawing bank-wordcloud...done")
         return (wordcloud, frequency_figure)
 
-    # @dash_app.callback(
-    #     [
-    #         Output("lda-table", "filter_query"),
-    #         Output("lda-table", "style_data_conditional"),
-    #     ],
-    #     [Input("tsne-lda", "clickData")],
-    # )
-    # def filter_table_on_scatter_click(tsne_click):
-    #     if tsne_click is not None:
-    #         selected_complaint = tsne_click["points"][0]["hovertext"]
-    #         filter_query = "{Document_No} eq " + str(selected_complaint)
-    #         print(filter_query)
-    #         styled_data = [
-    #             {
-    #                 "if": {"filter_query": filter_query},
-    #                 "backgroundColor": "#3D9970",
-    #                 "color": "white",
-    #             }
-    #         ]
-    #         return (filter_query, styled_data)
-    #     else:
-    #         return ["", []]
-
-    # @dash_app.callback(Output("bank-drop", "value"), [Input("bank-sample", "clickData")])
-    # def update_bank_click(value):
-    #     if value is not None:
-    #         selected_bank = value["points"][0]["x"]
-    #         return selected_bank
-    #     else:
-    #         return "NYT, N.A."
-    #
-    # def update_debug(input_value, source):
-    #     if input_value is not None:
-    #         return "picked value %s from %s" % (input_value, source)
 
     return dash_app.server
 
-# if __name__ == "__main__":
-#     app.run_server(host='0.0.0.0',debug=True)
+

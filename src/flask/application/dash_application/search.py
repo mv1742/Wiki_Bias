@@ -15,20 +15,14 @@ from dash import Dash
 import time
 from .layout import html_layout
 import psycopg2
-# user = os.environ["POSTGRES_USER"]
-# host = os.environ["POSTGRES_HOSTNAME"]
-# password = os.environ["POSTGRES_PASSWORD"]
-# dbname = os.environ["POSTGRES_DBNAME"]
-dbname='postgres'
-host='ec2-3-222-98-195.compute-1.amazonaws.com'
-# host = 'ec2-3-229-160-146.compute-1.amazonaws.com'
-user='postgres'
-password='Sapr2019'
+user = os.environ["POSTGRES_USER"]
+host = os.environ["POSTGRES_HOSTNAME"]
+password = os.environ["POSTGRES_PASSWORD"]
+dbname = os.environ["POSTGRES_DBNAME"]
+
 # Settings for psycopg Postgres connector
 con = psycopg2.connect(database=dbname, user=user, password=password, host=host)
 #
-# sql_query_1 = "SELECT host FROM groupby_url_ratio_relevant limit 100;"
-# df = pd.read_sql_query(sql_query_1, con)
 sql_query_1 = "SELECT * FROM source_score_ratio order by host_count desc limit 100;"
 df = pd.read_sql_query(sql_query_1, con)
 def Add_Dash(server):

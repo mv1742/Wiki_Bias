@@ -15,15 +15,11 @@ from dash import Dash
 import time
 from .layout import html_layout
 import psycopg2
-# user = os.environ["POSTGRES_USER"]
-# host = os.environ["POSTGRES_HOSTNAME"]
-# password = os.environ["POSTGRES_PASSWORD"]
-# dbname = os.environ["POSTGRES_DBNAME"]
-dbname='postgres'
-# host='ec2-3-222-98-195.compute-1.amazonaws.com'
-host = 'ec2-3-229-160-146.compute-1.amazonaws.com'
-user='postgres'
-password='Sapr2019'
+user = os.environ["POSTGRES_USER"]
+host = os.environ["POSTGRES_HOSTNAME"]
+password = os.environ["POSTGRES_PASSWORD"]
+dbname = os.environ["POSTGRES_DBNAME"]
+
 
 # Settings for psycopg Postgres connector
 con = psycopg2.connect(database=dbname, user=user, password=password, host=host)
@@ -33,8 +29,6 @@ dict_df2 = {}
 for index, row in df2.iterrows():
     dict_df2[row['id']]=row['entity_title']
 
-# print(df['Date'].describe())
-# print(df.head(20))
 def Add_Dash(server):
     """Create a Dash app."""
     external_stylesheets = ['/static/dist/css/styles.css',
@@ -47,9 +41,7 @@ def Add_Dash(server):
                     external_scripts=external_scripts,
                     routes_pathname_prefix='/timeseries/')
     dash_app.index_string = html_layout
-    # df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/hello-world-stock.csv')
     selected_dropdown_value = [41688778,52644751,61008894] #  13404: "Hong Kong",43971623: "Hong Kong Protests 2014",61008894: "Hong Kong Protests 2019",
-    # sql_query_2_3 = "SELECT * FROM timeseries_to_plot;"
 
     dropdown = {41688778: " Brexit",  52644751 : "Efforts to impeach Donald Trump",61008894:"2019 Hong Kong protests"}
     trace1 = []
@@ -95,25 +87,11 @@ def Add_Dash(server):
                                   yaxis={"title": "Edit type"})})
                            ], className="container")
 
-    # dash_app.layout = html.Div([
-    #     html.H3('Loading State Example'),
-    #     dcc.Dropdown(
-    #         id='dropdown-search',
-    #         options=[{'label': val, 'value': key} for key,val in dict_df2.items()]
-    #     ),
-    #     html.Div(id='output-search')
-    # ]+[html.Div(id="out-all-types")])
-    # init_callbacks(dash_ap
-    # p)
-    # def init_callbacks(dash_app):
+
     @dash_app.callback(Output('my-graph', 'figure'),
                        [Input('my-dropdown', 'value')])
     def update_graph(selected_dropdown_value):
-        # dropdown = {8209: "Doctor Who", 14533: "India", 17909: "Led Zepellin", }
-        # trace1 = []
-        # trace2 = []
-        # trace3 = []
-        # for stock in selected_dropdown_value:
+
         print(selected_dropdown_value)
         sql_query_1 = "SELECT * FROM timescale_ts22 where entity_id = "+str(selected_dropdown_value)+";"
         df = pd.read_sql_query(sql_query_1, con)

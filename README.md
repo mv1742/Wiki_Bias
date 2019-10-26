@@ -16,7 +16,7 @@
 1. [Motivation](README.md#Motivation)
 1. [Requirements](README.md#Requirements)
 1. [Pipeline](README.md#Pipeline)
-1. [Data Source](README.md#6.-Data Source)
+1. [Data Source](README.md#6.-Data-Source)
 1. [Metrics](README.md#7.-Metrics)
 1. [Methodology](README.md#8.-Methodology)
 1. [Dashboard](README.md#9.-Dashboard)

@@ -4,39 +4,6 @@ from airflow.operators.python_operator import PythonOperator
 from datetime import datetime, timedelta
 import os
 
-
-### 10.2.1 Data Ingestion
-
-` cp ~/wiki_bias/src/ingestion/`
-
-`./download.sh`
-
-### 10.2.2 Spark Processing
-
-` cp ~/wiki_bias/src/dataprocessing/`
-
-`/home/ubuntu/wiki_bias/src/dataprocessing/run_articles.sh`
-
-`./edit_history.sh`
-
-### 10.2.3 PageRank Calculation
-` cp ~/wiki_bias/src/pagerank/`
-
-`./page_rank.sh`
-
-### 10.2.4 SQL joins and analytics
-
-`cd $HOME/wiki_bias/src/analytics`
-
-`./run_analytics.sh`
-
-### 10.2.5 Run Flask App
-
-`cd $HOME/wiki_bias/src/flask`
-
-`python wsgi.py`
-
-
 srcDir = '/home/ubuntu/wiki_bias/ingestion'
 default_args = {
     'owner': 'airflow',

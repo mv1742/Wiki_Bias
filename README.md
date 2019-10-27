@@ -24,7 +24,8 @@
 1. [Repo-directory-structure](README.md#Repo-directory-structure)
 
 Go to...
-| -> [presentation slides](https://docs.google.com/presentation/d/1uzJ4H3GOEt4qJk-HOeshhaqHc4EtusS9e92oKj92rIo/edit?usp=sharing)*      |                ->  *[Demo @ dataangel.me](http://dataangel.me/80)*          |
+
+| -> *[presentation slides](https://docs.google.com/presentation/d/1uzJ4H3GOEt4qJk-HOeshhaqHc4EtusS9e92oKj92rIo/edit?usp=sharing)*      |                ->  *[Demo @ dataangel.me](http://dataangel.me/80)*          |
 | ------------- |:-------------:|
 
 

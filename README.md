@@ -50,7 +50,7 @@ Source of Conflict is a tool to analyze how references and other features in Wik
         - AWS account
         - VPC with DNS Resolution enabled
         - Subnet in VPC
-        - Security group accepting all inbound and outbound traffic (recommend locking down ports depending on technologies)
+        - Security group accepting all inbound and outbound traffic
         - AWS Access Key ID and AWS Secret Access Key ID
 - Spark packages
     - [Spark-XML](https://github.com/databricks/spark-xml)

@@ -1,10 +1,26 @@
-# 1. s2conflict_urls
+1. S2Conflict
 
-EXPLAIN ANALYZE CREATE table s2conflict_urls_pageviews AS SELECT * FROM pageviews2 LEFT JOIN s2conflict_urls ON(pageviews2.curr_title=s2conflict_urls.entity_title)
+CREATE TABLE wikirefs (
+id serial PRIMARY KEY,
+article VARCHAR (255),
+page_id NUMBER (255),
+template VARCHAR (255),
+template_original VARCHAR (255),
+title VARCHAR (255),
+url VARCHAR (255));
+
+ALTER TABLE article_conflict
+RENAME COLUMN "sum(reverts)" TO reverts;
+
+ALTER TABLE article_conflict
+RENAME COLUMN "sum(nofedits)" TO nofedits;
+
+CREATE TABLE conflict AS SELECT *, CAST(reverts AS float)/nofedits as ratio FROM article_conflict;
+
+EXPLAIN ANALYZE CREATE table s2conflict AS SELECT * FROM table_references LEFT JOIN conflict ON(table_references.id=conflict.entity_id)
 ORDER BY ratio;
 
-
-# 2. Table Groupby_Article  DONE
+# 2. Table Groupby_Article
 
 EXPLAIN ANALYZE CREATE table Groupby_Article AS SELECT id, entity_title, ratio, reverts, nofedits FROM s2conflict 
      WHERE ratio IS NOT NULL GROUP BY id, entity_title, ratio, reverts, nofedits ORDER BY reverts DESC;
@@ -49,13 +65,13 @@ WITH bounds AS (
 select * FROM s2conflict_urls_with_edit_history
 where reverts > (SELECT av_reverts FROM bounds);
 
-ALL: SELECT 15270784, ABOVE REV AVERAGE: SELECT 1947902.
+#ALL: SELECT 15270784, ABOVE REV AVERAGE: SELECT 1947902.
 
 s2c_large_edits 
-SELECT round(AVG(ratio)) as avg, MIN(ratio), MAX(ratio) FROM s2c_large_edits;
-        avg         |         min         |        max        |    stddev_samp     |       stddev       |     stddev_pop
---------------------+---------------------+-------------------+--------------------+--------------------+--------------------
- 0.0955473907965123 | 0.00393111194309247 | 0.776699029126214 | 0.0516400146363824 | 0.0516400146363824 | 0.0516400013810899
+#SELECT round(AVG(ratio)) as avg, MIN(ratio), MAX(ratio) FROM s2c_large_edits;
+#        avg         |         min         |        max        |    stddev_samp     |       stddev       |     stddev_pop
+#--------------------+---------------------+-------------------+--------------------+--------------------+--------------------
+# 0.0955473907965123 | 0.00393111194309247 | 0.776699029126214 | 0.0516400146363824 | 0.0516400146363824 | 0.0516400013810899
 
 
 # FILTER URLS LOWER_BOUND_RATIO
@@ -78,16 +94,16 @@ select distinct(host), count(host) AS host_count, CAST(AVG(ratio) AS FLOAT) AS r
 SELECT 1091137
 
 
-SELECT STDDEV(count) as std_host_count, round(AVG(count)) as host_avg, MIN(count) as host_min, MAX(count) as host_max, round(AVG(avg)) as avg_reverts, STDDEV(avg) as stdev_reverts, MIN(avg) as min_reverts, MAX(avg) as max_reverts FROM Groupby_url_reverts;
- std_host_count  | host_avg | host_min | host_max | avg_reverts |  stdev_reverts   | min_reverts | max_reverts
-------------------+----------+----------+----------+-------------+------------------+-------------+-------------
- 536.361558401490 |       12 |        1 |   410281 |          38 | 146.973545566755 |           0 |        3522
+#SELECT STDDEV(count) as std_host_count, round(AVG(count)) as host_avg, MIN(count) as host_min, MAX(count) as host_max, round(AVG(avg)) as avg_reverts, STDDEV(avg) as stdev_reverts, MIN(avg) as min_reverts, MAX(avg) as max_reverts FROM Groupby_url_reverts;
+# std_host_count  | host_avg | host_min | host_max | avg_reverts |  stdev_reverts   | min_reverts | max_reverts
+#------------------+----------+----------+----------+-------------+------------------+-------------+-------------
+# 536.361558401490 |       12 |        1 |   410281 |          38 | 146.973545566755 |           0 |        3522
 
 
-SELECT STDDEV(host_count) as std_host_count, round(AVG(host_count)) as host_avg, MIN(host_count) as host_min, MAX(host_count) as host_max, STDDEV(ratio_av) as stdev_ratio, AVG(ratio_av) as avg_ratio, MIN(ratio_av) as min_ratio, MAX(ratio_av) as max_ratio FROM Groupby_url_ratio;
-  std_host_count  | host_avg | host_min | host_max |    stdev_ratio    |     avg_ratio     | min_ratio |     max_ratio
-------------------+----------+----------+----------+-------------------+-------------------+-----------+-------------------
- 536.361558401490 |       12 |        1 |   410281 | 0.036954956703525 | 0.026362976608395 |         0 | 0.982539682539682
+#SELECT STDDEV(host_count) as std_host_count, round(AVG(host_count)) as host_avg, MIN(host_count) as host_min, MAX(host_count) as host_max, STDDEV(ratio_av) as stdev_ratio, AVG(ratio_av) as avg_ratio, MIN(ratio_av) as min_ratio, MAX(ratio_av) as max_ratio FROM Groupby_url_ratio;
+#  std_host_count  | host_avg | host_min | host_max |    stdev_ratio    |     avg_ratio     | min_ratio |     max_ratio
+#------------------+----------+----------+----------+-------------------+-------------------+-----------+-------------------
+# 536.361558401490 |       12 |        1 |   410281 | 0.036954956703525 | 0.026362976608395 |         0 | 0.982539682539682
 
 
 CREATE table Groupby_url_reverts_relevant AS
@@ -104,17 +120,17 @@ select * FROM Groupby_url_ratio
 where host_count > (SELECT upper_bound FROM bounds);
 
 #SELECT 4842
-SELECT STDDEV(count) as std_host_count, round(AVG(count)) as host_avg, MIN(count) as host_min, MAX(count) as host_max, round(AVG(avg)) as avg_reverts, STDDEV(avg) as stdev_reverts, MIN(avg) as min_reverts, MAX(avg) as max_reverts FROM Groupby_url_reverts_relevant;
-  std_host_count   | host_avg | host_min | host_max | avg_reverts |  stdev_reverts   | min_reverts |   max_reverts
--------------------+----------+----------+----------+-------------+------------------+-------------+------------------
- 7882.980951014345 |     1634 |      281 |   410281 |          37 | 42.6253820394668 |           0 | 482.337786259542
+#SELECT STDDEV(count) as std_host_count, round(AVG(count)) as host_avg, MIN(count) as host_min, MAX(count) as host_max, round(AVG(avg)) as avg_reverts, STDDEV(avg) as stdev_reverts, MIN(avg) as min_reverts, MAX(avg) as max_reverts FROM Groupby_url_reverts_relevant;
+#  std_host_count   | host_avg | host_min | host_max | avg_reverts |  stdev_reverts   | min_reverts |   max_reverts
+# -------------------+----------+----------+----------+-------------+------------------+-------------+------------------
+# 7882.980951014345 |     1634 |      281 |   410281 |          37 | 42.6253820394668 |           0 | 482.337786259542
 
 
-SELECT STDDEV(host_count) as std_host_count, round(AVG(host_count)) as host_avg, MIN(host_count) as host_min, MAX(host_count) as host_max, STDDEV(ratio_av) as stdev_ratio, AVG(ratio_av) as avg_ratio, MIN(ratio_av) as min_ratio, MAX(ratio_av) as max_ratio FROM Groupby_url_ratio_relevant;
+# SELECT STDDEV(host_count) as std_host_count, round(AVG(host_count)) as host_avg, MIN(host_count) as host_min, MAX(host_count) as host_max, STDDEV(ratio_av) as stdev_ratio, AVG(ratio_av) as avg_ratio, MIN(ratio_av) as min_ratio, MAX(ratio_av) as max_ratio FROM Groupby_url_ratio_relevant;
 
-  std_host_count   | host_avg | host_min | host_max |    stdev_ratio    |     avg_ratio     | min_ratio |     max_ratio
--------------------+----------+----------+----------+-------------------+-------------------+-----------+-------------------
- 7882.980951014345 |     1634 |      281 |   410281 | 0.015547830721196 | 0.025486845477976 |         0 | 0.119337545612111
+#  std_host_count   | host_avg | host_min | host_max |    stdev_ratio    |     avg_ratio     | min_ratio |     max_ratio
+#-------------------+----------+----------+----------+-------------------+-------------------+-----------+-------------------
+# 7882.980951014345 |     1634 |      281 |   410281 | 0.015547830721196 | 0.025486845477976 |         0 | 0.119337545612111
 
 
 CREATE table Source_Score_reverts AS

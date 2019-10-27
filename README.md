@@ -12,10 +12,11 @@
 ## Insight Data Engineering 2019C
 ## Manrique Vargas (MV), mv1742@nyu.edu
 
-1. [Introduction](README.md#Introduction)
-1. [Motivation](README.md#Motivation)
-1. [Requirements](README.md#Requirements)
-1. [Pipeline](README.md#Pipeline)
+1. [Introduction](README.md#1.-Introduction)
+1. [Motivation](README.md#2.-Motivation)
+1. [Requirements](README.md#3.-Requirements)
+1. [Pipeline](README.md#4.-Pipeline)
+1. [Architecture](README.md#5.-Architecture)
 1. [Data Source](README.md#6.-Data-Source)
 1. [Metrics](README.md#7.-Metrics)
 1. [Methodology](README.md#8.-Methodology)

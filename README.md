@@ -137,7 +137,7 @@ __Figure 3.__ Dashboard analyiss by domain
 ![diagram](figs/db4.png)
 __Figure 4.__ Dashboard analysis by category
 ![diagram](figs/db5.png)
-__Figure 4.__ Search results
+__Figure 5.__ Search results
 
 
 # 10. Getting Started

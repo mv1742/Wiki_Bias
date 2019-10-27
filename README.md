@@ -9,7 +9,7 @@
 ![Psycopg2-Binary](https://img.shields.io/badge/Psycopg2--Binary-v2.7.7-red.svg?longCache=true&style=flat-square&logo=PostgreSQL&logoColor=white&colorA=4c566a&colorB=bf616a)
 ![Flask-SQLAlchemy](https://img.shields.io/badge/Flask--SQLAlchemy-2.3.2-red.svg?longCache=true&style=flat-square&logo=scala&logoColor=white&colorA=4c566a&colorB=bf616a)
 
-## Insight Data Engineering
+## Insight Data Engineering 2019C
 ## Manrique Vargas (MV), mv1742@nyu.edu
 
 1. [Introduction](README.md#Introduction)
@@ -23,8 +23,10 @@
 1. [Getting Started](README.md#10.-Getting-Started)
 1. [Repo-directory-structure](README.md#Repo-directory-structure)
 
-Go to presentation [slides](https://docs.google.com/presentation/d/1uzJ4H3GOEt4qJk-HOeshhaqHc4EtusS9e92oKj92rIo/edit?usp=sharing)
-Go to dashboard Demo [dataangel.me](http://dataangel.me/80)
+Go to...
+| -> [presentation slides](https://docs.google.com/presentation/d/1uzJ4H3GOEt4qJk-HOeshhaqHc4EtusS9e92oKj92rIo/edit?usp=sharing)*      |                ->  *[Demo @ dataangel.me](http://dataangel.me/80)*          |
+| ------------- |:-------------:|
+
 
 # 1. Introduction
 Source of Conflict is a tool to analyze how references and other features in Wikipedia articles affect the edit history. I calculate different metrics for bias and identify which metrics lead to more edits. Conflict is defined by number of reverted articles. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots.

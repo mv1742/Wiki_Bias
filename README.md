@@ -12,6 +12,9 @@
 ## Insight Data Engineering 2019C
 ## Manrique Vargas (MV), mv1742@nyu.edu
 
+| Go to -> *[Presentation slides](https://docs.google.com/presentation/d/1uzJ4H3GOEt4qJk-HOeshhaqHc4EtusS9e92oKj92rIo/edit?usp=sharing)*      |  Go to ->  *[Demo @ dataangel.me](http://dataangel.me/80)*          |
+| ------------- |:-------------:|
+
 1. [Introduction](README.md#1.-Introduction)
 1. [Motivation](README.md#2.-Motivation)
 1. [Requirements](README.md#3.-Requirements)
@@ -23,9 +26,6 @@
 1. [Dashboard](README.md#9.-Dashboard)
 1. [Getting Started](README.md#10.-Getting-Started)
 1. [Repo-directory-structure](README.md#Repo-directory-structure)
-
-| Go to -> *[Presentation slides](https://docs.google.com/presentation/d/1uzJ4H3GOEt4qJk-HOeshhaqHc4EtusS9e92oKj92rIo/edit?usp=sharing)*      |  Go to ->  *[Demo @ dataangel.me](http://dataangel.me/80)*          |
-| ------------- |:-------------:|
 
 
 # 1. Introduction

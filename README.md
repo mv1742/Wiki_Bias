@@ -21,8 +21,10 @@
 1. [Methodology](README.md#8.-Methodology)
 1. [Dashboard](README.md#9.-Dashboard)
 1. [Getting Started](README.md#10.-Getting-Started)
-1. [Results](README.md#11.-Results)
 1. [Repo-directory-structure](README.md#Repo-directory-structure)
+
+Go to presentation [slides](https://docs.google.com/presentation/d/1uzJ4H3GOEt4qJk-HOeshhaqHc4EtusS9e92oKj92rIo/edit?usp=sharing)
+Go to dashboard Demo [dataangel.me](http://dataangel.me/80)
 
 # 1. Introduction
 Source of Conflict is a tool to analyze how references and other features in Wikipedia articles affect the edit history. I calculate different metrics for bias and identify which metrics lead to more edits. Conflict is defined by number of reverted articles. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots.
@@ -182,12 +184,7 @@ Post installation of all the components of the pipeline, it can be used in two w
 
 `python wsgi.py`
 
-# 11. Results
-
-Go to dashboard [dataangel.me](http://dataangel.me/80).
-
-
-# 12. Repo directory structure
+# 11. Repo directory structure
 
 The directory structure looks like this:
 ```

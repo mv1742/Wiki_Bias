@@ -60,7 +60,7 @@ Source of Conflict is a tool to analyze how references and other features in Wik
 - [Requirements](.\src\flask\plotlydash-flask\requirements.txt)
 
 # 4. Pipeline
-![Pipeline.png](https://github.com/mv1742/Wiki_Bias/blob/master/Images/Pipeline.png)
+![Pipeline.png](https://github.com/mv1742/Wiki_Bias/blob/master/figs/Pipeline.png)
 
 # 5. Architecture
 ### Spark

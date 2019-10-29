@@ -27,7 +27,6 @@
 1. [Getting Started](README.md#10.-Getting-Started)
 1. [Repo-directory-structure](README.md#Repo-directory-structure)
 
-
 # 1. Introduction
 Source of Conflict is a tool to analyze how references and other features in Wikipedia articles affect the edit history. I calculate different metrics for bias and identify which metrics lead to more edits. Conflict is defined by number of reverted articles. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots.
 
@@ -46,7 +45,6 @@ Source of Conflict is a tool to analyze how references and other features in Wik
 3.2 Data Processing
 - Setup Spark Cluster
     - AWS (or alternative)  
-        - Prerequisites
         - AWS account
         - VPC with DNS Resolution enabled
         - Subnet in VPC

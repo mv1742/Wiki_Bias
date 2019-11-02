@@ -3,7 +3,7 @@
 ## Insight Data Engineering 2019C
 ## Manrique Vargas (MV), mv1742@nyu.edu
 
-<img src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/SoC.png" data-canonical-src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/SoC.png" width="20" height="20" />
+<img src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/SoC.png" data-canonical-src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/SoC.png" width="220" height="220" />
 
 | Go to -> *[Presentation slides](https://docs.google.com/presentation/d/1uzJ4H3GOEt4qJk-HOeshhaqHc4EtusS9e92oKj92rIo/edit?usp=sharing)*      |  Go to ->  *[Demo @ dataangel.me](http://dataangel.me/80)*          |
 | ------------- |:-------------:|

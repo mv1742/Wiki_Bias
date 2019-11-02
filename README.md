@@ -3,6 +3,8 @@
 ## Insight Data Engineering 2019C
 ## Manrique Vargas (MV), mv1742@nyu.edu
 
+![logo](figs/LogoMakr_0T8BkT.png)
+
 | Go to -> *[Presentation slides](https://docs.google.com/presentation/d/1uzJ4H3GOEt4qJk-HOeshhaqHc4EtusS9e92oKj92rIo/edit?usp=sharing)*      |  Go to ->  *[Demo @ dataangel.me](http://dataangel.me/80)*          |
 | ------------- |:-------------:|
 

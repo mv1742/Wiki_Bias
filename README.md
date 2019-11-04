@@ -160,18 +160,13 @@ Post installation of all the components of the pipeline, it can be used in two w
 
 `./edit_history.sh`
 
-### 10.2.3 PageRank Calculation
-` cp ~/wiki_bias/src/pagerank/`
-
-`./page_rank.sh`
-
-### 10.2.4 SQL joins and analytics
+### 10.2.3 SQL joins and analytics
 
 `cd $HOME/wiki_bias/src/analytics`
 
 `./run_analytics.sh`
 
-### 10.2.5 Run Flask App
+### 10.2.4 Run Flask App
 
 `cd $HOME/wiki_bias/src/flask`
 
@@ -212,16 +207,13 @@ The directory structure looks like this:
     ├── flask
     │   ├── README.md
     │   ├── __init__.py
-    │   ├── app1.py
     │   ├── application
-    │   ├── assets
     │   ├── config.py
     │   ├── flask_app.py
     │   ├── ldacomplaints.py
     │   ├── requirements.txt
     │   ├── setup.py
     │   ├── start.sh
-    │   ├── wiki_bias_py
     │   └── wsgi.py
     └── ingestion
         ├── README.md

@@ -1,27 +1,23 @@
 # Source of Conflict
 
-![Python](https://img.shields.io/badge/Python-3.7-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
-![Flask](https://img.shields.io/badge/Flask-1.0.2-blue.svg?longCache=true&logo=flask&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
-![Flask-Assets](https://img.shields.io/badge/Flask--Assets-v0.12-blue.svg?longCache=true&logo=flask&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
-![Pandas](https://img.shields.io/badge/Pandas-v0.24.2-blue.svg?longCache=true&logo=python&longCache=true&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
-![Dash](https://img.shields.io/badge/Dash-v1.0.2-blue.svg?longCache=true&logo=python&longCache=true&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
-![Plotly](https://img.shields.io/badge/Plotly-v3.7.1-blue.svg?longCache=true&logo=python&longCache=true&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
-![Psycopg2-Binary](https://img.shields.io/badge/Psycopg2--Binary-v2.7.7-red.svg?longCache=true&style=flat-square&logo=PostgreSQL&logoColor=white&colorA=4c566a&colorB=bf616a)
-![Flask-SQLAlchemy](https://img.shields.io/badge/Flask--SQLAlchemy-2.3.2-red.svg?longCache=true&style=flat-square&logo=scala&logoColor=white&colorA=4c566a&colorB=bf616a)
-
-## Insight Data Engineering
+## Insight Data Engineering 2019C
 ## Manrique Vargas (MV), mv1742@nyu.edu
 
-1. [Introduction](README.md#Introduction)
-1. [Motivation](README.md#Motivation)
-1. [Requirements](README.md#Requirements)
-1. [Pipeline](README.md#Pipeline)
-1. [Data Source](README.md#6.-Data Source)
+<img src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/SoC.png" data-canonical-src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/SoC.png" width="180" height="120" />
+
+| Go to -> *[Presentation slides](https://docs.google.com/presentation/d/1uzJ4H3GOEt4qJk-HOeshhaqHc4EtusS9e92oKj92rIo/edit?usp=sharing)*      |  Go to ->  *[Demo @ dataangel.me](http://dataangel.me/80)*          |
+| ------------- |:-------------:|
+
+1. [Introduction](README.md#1.-Introduction)
+1. [Motivation](README.md#2.-Motivation)
+1. [Requirements](README.md#3.-Requirements)
+1. [Pipeline](README.md#4.-Pipeline)
+1. [Architecture](README.md#5.-Architecture)
+1. [Data Source](README.md#6.-Data-Source)
 1. [Metrics](README.md#7.-Metrics)
 1. [Methodology](README.md#8.-Methodology)
 1. [Dashboard](README.md#9.-Dashboard)
 1. [Getting Started](README.md#10.-Getting-Started)
-1. [Results](README.md#11.-Results)
 1. [Repo-directory-structure](README.md#Repo-directory-structure)
 
 # 1. Introduction
@@ -42,11 +38,10 @@ Source of Conflict is a tool to analyze how references and other features in Wik
 3.2 Data Processing
 - Setup Spark Cluster
     - AWS (or alternative)  
-        - Prerequisites
         - AWS account
         - VPC with DNS Resolution enabled
         - Subnet in VPC
-        - Security group accepting all inbound and outbound traffic (recommend locking down ports depending on technologies)
+        - Security group accepting all inbound and outbound traffic
         - AWS Access Key ID and AWS Secret Access Key ID
 - Spark packages
     - [Spark-XML](https://github.com/databricks/spark-xml)
@@ -60,7 +55,7 @@ Source of Conflict is a tool to analyze how references and other features in Wik
 - [Requirements](.\src\flask\plotlydash-flask\requirements.txt)
 
 # 4. Pipeline
-![Pipeline.png](https://github.com/mv1742/Wiki_Bias/blob/master/Images/Pipeline.png)
+![Pipeline.png](https://github.com/mv1742/Wiki_Bias/blob/master/figs/Pipeline.png)
 
 # 5. Architecture
 ### Spark
@@ -137,7 +132,7 @@ __Figure 3.__ Dashboard analyiss by domain
 ![diagram](figs/db4.png)
 __Figure 4.__ Dashboard analysis by category
 ![diagram](figs/db5.png)
-__Figure 4.__ Search results
+__Figure 5.__ Search results
 
 
 # 10. Getting Started
@@ -182,12 +177,7 @@ Post installation of all the components of the pipeline, it can be used in two w
 
 `python wsgi.py`
 
-# 11. Results
-
-Go to dashboard [dataangel.me](http://dataangel.me/80).
-
-
-# 12. Repo directory structure
+# 11. Repo directory structure
 
 The directory structure looks like this:
 ```

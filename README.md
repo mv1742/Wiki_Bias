@@ -184,14 +184,13 @@ __Figure 5.__ Search results
 
 ## 12.1. Spark to Posgress
 
-### 12.1.2 Install ICBA
+### 12.1.1 Setup JDBC
 
-1. Download : /Wiki_Bias/src/ingestion$ wget https://jdbc.postgresql.org/download/postgresql-42.2.8.jar
-2. Go to pg configuration: sudo nano /etc/postgresql/10/main/pg_hba.conf
+1. Download Postgresql jar file to Spark master node using `/Wiki_Bias/src/ingestion$ wget https://jdbc.postgresql.org/download/postgresql-42.2.8.jar`
 
-local   all             all                                     md5
+2. Go to pg configuration using `sudo nano /etc/postgresql/10/main/pg_hba.conf` and update security to "md5":
 
-/// host    all             all             0.0.0.0/0               md5
+    - local   all             all                                     md5
 
 3. In postgresql.conf file, go to Connection Settings. Change the listening address to: listen_addresses = '*'
 

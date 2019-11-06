@@ -16,12 +16,15 @@
 1. [Data Source](README.md#6.-Data-Source)
 1. [Metrics](README.md#7.-Metrics)
 1. [Methodology](README.md#8.-Methodology)
-1. [Dashboard](README.md#9.-Dashboard)
-1. [Getting Started](README.md#10.-Getting-Started)
-1. [Repo-directory-structure](README.md#Repo-directory-structure)
+1. [Getting Started](README.md#9.-Getting-Started)
+1. [Dashboard](README.md#10.-Dashboard)
+1. [Analytics](README.md#11.-Analytics)
+1. [Setup Notes](README.md#12.-Setup-Notes)
+1. [Repo-directory-structure](README.md#13.-Repo-directory-structure)
+
 
 # 1. Introduction
-Source of Conflict is a tool to analyze how references and other features in Wikipedia articles affect the edit history. I calculate different metrics for bias and identify which metrics lead to more edits. Conflict is defined by number of reverted articles. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots.
+Source of Conflict is a tool for Wikipedia users and moderators to analyze how some features affect the edit history. I calculate different metrics for and identify which metrics lead to more edits. Conflict is defined by number of reverted articles normalized by total edits and article length. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots.
 
 # 2. Motivation
 - Wikipedia needs a metric to quantify the bias of its articles.
@@ -122,7 +125,45 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 ## 8.4 Run Data Analytics
 [analytics](./src/analytics/wiki_analytics.sql)
 
-# 9. Dashboard
+# 9. Getting Started
+
+Post installation of all the components of the pipeline, it can be used in two ways:
+## 9.1 Initialize the Dag in Airflow and launch it on airflow scheduler:
+
+` cp ~/wiki_bias/src/airflow/de_dag.py ~/airflow/de_dag.py`
+ 
+` python de_dag.py`
+  
+## 9.2 Run the following scripts:
+
+### 9.2.1 Data Ingestion
+
+` cp ~/wiki_bias/src/ingestion/`
+
+`./download.sh`
+
+### 9.2.2 Spark Processing
+
+` cp ~/wiki_bias/src/dataprocessing/`
+
+`./run_articles.sh`
+
+`./edit_history.sh`
+
+### 9.2.3 SQL joins and analytics
+
+`cd $HOME/wiki_bias/src/analytics`
+
+`./run_analytics.sh`
+
+### 9.2.4 Run Flask App
+
+`cd $HOME/wiki_bias/src/flask`
+
+`python wsgi.py`
+
+
+# 10. Dashboard
 ![diagram](figs/db1.png)
 __Figure 1.__ Dashboard showing timeseries of the edit history
 ![diagram](figs/db2.png)
@@ -134,45 +175,39 @@ __Figure 4.__ Dashboard analysis by category
 ![diagram](figs/db5.png)
 __Figure 5.__ Search results
 
+# 11. Analytics
 
-# 10. Getting Started
+## 11.1 Table Schema
+![diagram](figs/Schema.png)
 
-Post installation of all the components of the pipeline, it can be used in two ways:
-## 10.1 Initialize the Dag in Airflow and launch it on airflow scheduler:
+# 12. Setup Notes
 
-` cp ~/wiki_bias/src/airflow/de_dag.py ~/airflow/de_dag.py`
- 
-` python de_dag.py`
-  
-## 10.2 Run the following scripts:
+## 12.1. Spark to Posgress
 
-### 10.2.1 Data Ingestion
+### 12.1.2 Install ICBA
 
-` cp ~/wiki_bias/src/ingestion/`
+1. Download : /Wiki_Bias/src/ingestion$ wget https://jdbc.postgresql.org/download/postgresql-42.2.8.jar
+2. Go to pg configuration: sudo nano /etc/postgresql/10/main/pg_hba.conf
 
-`./download.sh`
+local   all             all                                     md5
 
-### 10.2.2 Spark Processing
+/// host    all             all             0.0.0.0/0               md5
 
-` cp ~/wiki_bias/src/dataprocessing/`
+3. In postgresql.conf file, go to Connection Settings. Change the listening address to: listen_addresses = '*'
 
-`./run_articles.sh`
+# 12.2 Spark Tuning
 
-`./edit_history.sh`
+Edit Spark configuration file /usr/local/spark/conf/spark-defaults.conf
+[how-to-tune-your-apache-spark-jobs-part-2](https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-2/):
 
-### 10.2.3 SQL joins and analytics
+```
+spark.driver.memory                4G 
+spark.executor.memory              2G 
+spark.driver.cores                 3 
+spark.executor.cores               3
+```
 
-`cd $HOME/wiki_bias/src/analytics`
-
-`./run_analytics.sh`
-
-### 10.2.4 Run Flask App
-
-`cd $HOME/wiki_bias/src/flask`
-
-`python wsgi.py`
-
-# 11. Repo directory structure
+# 13. Repo directory structure
 
 The directory structure looks like this:
 ```

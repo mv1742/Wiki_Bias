@@ -178,7 +178,7 @@ __Figure 3.__ Dashboard analyiss by domain
 __Figure 4.__ Dashboard analysis by category
 
 ![diagram](figs/db4.png)
-__Figure 5.__ Dashboard Word Cloud Topic Model
+__Figure 5.__ Dashboard word cloud topic model
 
 ![diagram](figs/db_5.png)
 __Figure 6.__ Search results

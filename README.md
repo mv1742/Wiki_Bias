@@ -168,12 +168,14 @@ Post installation of all the components of the pipeline, it can be used in two w
 __Figure 1.__ Dashboard showing timeseries of the edit history
 ![diagram](figs/db2.png)
 __Figure 2.__ Dashboard analysis by article
-![diagram](figs/db3.png)
+![diagram](figs/db_3.png)
 __Figure 3.__ Dashboard analyiss by domain
-![diagram](figs/db4.png)
+![diagram](figs/db3.png)
 __Figure 4.__ Dashboard analysis by category
+![diagram](figs/db_4.png)
+__Figure 5.__ Dashboard Word Cloud Topic Model
 ![diagram](figs/db_5.png)
-__Figure 5.__ Search results
+__Figure 6.__ Search results
 
 # 11. Analytics
 

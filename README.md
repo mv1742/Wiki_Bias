@@ -172,7 +172,7 @@ __Figure 2.__ Dashboard analysis by article
 __Figure 3.__ Dashboard analyiss by domain
 ![diagram](figs/db4.png)
 __Figure 4.__ Dashboard analysis by category
-![diagram](figs/db5.png)
+![diagram](figs/db_5.png)
 __Figure 5.__ Search results
 
 # 11. Analytics

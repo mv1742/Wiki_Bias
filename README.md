@@ -194,7 +194,7 @@ __Figure 5.__ Search results
 
 3. In postgresql.conf file, go to Connection Settings. Change the listening address to: listen_addresses = '*'
 
-# 12.2 Spark Tuning
+## 12.2 Spark Tuning
 
 Edit Spark configuration file /usr/local/spark/conf/spark-defaults.conf
 [how-to-tune-your-apache-spark-jobs-part-2](https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-2/):

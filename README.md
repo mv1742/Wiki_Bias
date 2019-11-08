@@ -39,7 +39,7 @@ Source of Conflict is a tool for Wikipedia users and moderators to analyze how s
 - [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#installation)
 
 3.2 Data Processing
-- Setup Spark Cluster
+- Setup spark cluster
     - AWS (or alternative)  
         - AWS account
         - VPC with DNS Resolution enabled
@@ -107,28 +107,28 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
     3. Categories
         3.1 Infobox
         3.2 Sub-categories
-    4. Other Data
+    4. Other data
         4.1 Article length
         4.2 Links from article
 
 # 8. Methodology
-## 8.1 Data Collection:
+## 8.1 Data collection:
 [generate_text_file.py](./src/ingestion/generate_text_file.py): Uses the BeautifulSoup package to parse the urls on the stackexchange data dump to retrieve the urls of the .7z files of all the wikipedia dump.
 
-## 8.2 Parse Wikipedia Articles
+## 8.2 Parse Wikipedia articles
 [articles.py](./src/dataprocessing/process_articles/articles.py)
 
 
-## 8.3 Parse Wikipedia Edit History
+## 8.3 Parse Wikipedia edit history
 [edit_history.py](./src/dataprocessing/process_articles/edit_history.py)
 
-## 8.4 Run Data Analytics
+## 8.4 Run data analytics
 [analytics](./src/analytics/wiki_analytics.sql)
 
-# 9. Getting Started
+# 9. Getting started
 
 Post installation of all the components of the pipeline, it can be used in two ways:
-## 9.1 Initialize the Dag in Airflow and launch it on airflow scheduler:
+## 9.1 Initialize the DAG in Airflow and launch it on airflow scheduler:
 
 ` cp ~/wiki_bias/src/airflow/de_dag.py ~/airflow/de_dag.py`
  
@@ -136,13 +136,13 @@ Post installation of all the components of the pipeline, it can be used in two w
   
 ## 9.2 Run the following scripts:
 
-### 9.2.1 Data Ingestion
+### 9.2.1 Data ingestion
 
 ` cp ~/wiki_bias/src/ingestion/`
 
 `./download.sh`
 
-### 9.2.2 Spark Processing
+### 9.2.2 Spark processing
 
 ` cp ~/wiki_bias/src/dataprocessing/`
 
@@ -156,7 +156,7 @@ Post installation of all the components of the pipeline, it can be used in two w
 
 `./run_analytics.sh`
 
-### 9.2.4 Run Flask App
+### 9.2.4 Run Flask app
 
 `cd $HOME/wiki_bias/src/flask`
 
@@ -185,12 +185,12 @@ __Figure 6.__ Search results
 
 # 11. Analytics
 
-## 11.1 Table Schema
+## 11.1 Table schema
 ![diagram](figs/Schema.png)
 
 # 12. Setup Notes
 
-## 12.1. Spark to Posgress
+## 12.1. Spark to Postgresql
 
 ### 12.1.1 Setup JDBC
 
@@ -202,7 +202,7 @@ __Figure 6.__ Search results
 
 3. In postgresql.conf file, go to Connection Settings. Change the listening address to: listen_addresses = '*'
 
-## 12.2 Spark Tuning
+## 12.2 Spark tuning
 
 Edit Spark configuration file /usr/local/spark/conf/spark-defaults.conf
 [how-to-tune-your-apache-spark-jobs-part-2](https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-2/):

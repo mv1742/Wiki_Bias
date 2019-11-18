@@ -130,7 +130,7 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 Post installation of all the components of the pipeline, it can be used in two ways:
 ## 9.1 Initialize the DAG in Airflow and launch it on airflow scheduler:
 
-` cp ~/wiki_bias/src/airflow/de_dag.py ~/airflow/de_dag.py`
+` cp ~/Wiki_Bias/src/airflow/de_dag.py ~/airflow/de_dag.py`
  
 ` python de_dag.py`
   
@@ -138,13 +138,13 @@ Post installation of all the components of the pipeline, it can be used in two w
 
 ### 9.2.1 Data ingestion
 
-` cd ~/wiki_bias/src/ingestion/`
+` cd ~/Wiki_Bias/src/ingestion/`
 
 `./download.sh`
 
 ### 9.2.2 Spark processing
 
-` cd ~/wiki_bias/src/dataprocessing/`
+` cd ~/Wiki_Bias/src/dataprocessing/`
 
 `./run_articles.sh`
 
@@ -152,13 +152,13 @@ Post installation of all the components of the pipeline, it can be used in two w
 
 ### 9.2.3 SQL joins and analytics
 
-`cd $HOME/wiki_bias/src/analytics`
+`cd $HOME/Wiki_Bias/src/analytics`
 
 `./run_analytics.sh`
 
 ### 9.2.4 Run Flask app
 
-`cd $HOME/wiki_bias/src/flask`
+`cd $HOME/Wiki_Bias/src/flask`
 
 `python wsgi.py`
 

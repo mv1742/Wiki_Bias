@@ -138,13 +138,13 @@ Post installation of all the components of the pipeline, it can be used in two w
 
 ### 9.2.1 Data ingestion
 
-` cp ~/wiki_bias/src/ingestion/`
+` cd ~/wiki_bias/src/ingestion/`
 
 `./download.sh`
 
 ### 9.2.2 Spark processing
 
-` cp ~/wiki_bias/src/dataprocessing/`
+` cd ~/wiki_bias/src/dataprocessing/`
 
 `./run_articles.sh`
 

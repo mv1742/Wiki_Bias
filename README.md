@@ -24,7 +24,7 @@
 
 
 # 1. Introduction
-Source of Conflict is a tool for Wikipedia users and moderators to analyze how some features affect the edit history. I calculate different metrics for and identify which metrics lead to more edits. Conflict is defined by number of reverted articles normalized by total edits and article length. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots.
+Source of Conflict is a tool for Wikipedia users and moderators to analyze how some features affect the edit history. I calculate different metrics for and identify which metrics lead to more edits. Conflict is defined by number of reverted articles normalized by total edits and article length. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots. Currently conflictive articles in Wikipedia are manually protected by moderators when necessary. Future work will focus on automating the article protection in Wikipedia using machine learning.
 
 # 2. Motivation
 - Wikipedia needs a metric to quantify the bias of its articles.

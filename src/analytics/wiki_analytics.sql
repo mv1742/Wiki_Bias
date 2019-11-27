@@ -22,8 +22,8 @@ where reverts > (SELECT upper_bound FROM bounds);
 -- 2.2. Calculate Conflict Score 1 to 5
 CREATE materialized view groupby_articles_Score_ratios AS
 WITH bounds AS (
-    SELECT (AVG(conflict_score) + STDDEV_SAMP(ratio)* 4) as upper_bound,
-	(AVG(conflict_score) + STDDEV_SAMP(conflict_score) * 1) as med_low_bound,
+    SELECT (AVG(conflict_score) + STDDEV_SAMP(ratio)* 3) as upper_bound,
+	(AVG(conflict_score) + STDDEV_SAMP(conflict_score) * 2) as med_low_bound,
 	(AVG(conflict_score) - STDDEV_SAMP(conflict_score)  * 1) as lower_bound FROM groupby_article_len_relevant)
 select *, (case when (conflict_score < (SELECT lower_bound FROM bounds)) then 1 when (conflict_score > (SELECT lower_bound FROM bounds) and conflict_score < (SELECT med_low_bound FROM BOUNDS)) then 2
 			when (conflict_score > (SELECT med_low_bound FROM BOUNDS) and conflict_score < (SELECT upper_bound FROM BOUNDS)) then 3 when (conflict_score > (SELECT upper_bound FROM BOUNDS)) then 4 end) as rating_1
@@ -38,7 +38,7 @@ CREATE materialized view s2conflict_urls AS select distinct(host), count(host)
   order by count desc
 
 -- 3.2. Filter URL with Large edits
-CREATE materialized view  s2c_large_edits AS
+CREATE materialized view  s2c_urls_large_edits AS
 WITH bounds AS (
     SELECT (AVG(reverts) - STDDEV_SAMP(reverts) * 0.5) as lower_bound,
            (AVG(reverts) + STDDEV_SAMP(reverts) * 0.5) as upper_bound, AVG(reverts) as av_reverts

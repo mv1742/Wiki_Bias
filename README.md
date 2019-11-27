@@ -28,7 +28,7 @@ Source of Conflict is a tool for Wikipedia users and moderators to analyze how s
 Read further discussion [here](https://github.com/mv1742/Wiki_Bias/blob/master/Discussion.md). 
 
 # 2. Motivation
-- Wikipedia needs a metric to quantify the bias of its articles.
+- Wikipedia needs a metric to quantify the bias of its articles
 - Understand behaviours in crowdsourcing platforms like Wikipedia
 - Identify conflictive sources of information
 - Evaluate quality of article references
@@ -116,26 +116,26 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 ## 8.1 Data collection:
 [generate_text_file.py](./src/ingestion/generate_text_file.py): 
 
-- Uses the BeautifulSoup package to parse the urls on the stackexchange data dump to retrieve the urls of the .7z files of all the wikipedia dump.
+- Uses the BeautifulSoup package to parse the urls on the stackexchange data dump to retrieve the urls of the .7z files of all the wikipedia dump
 
 ## 8.2 Parse Wikipedia articles
 [articles.py](./src/dataprocessing/process_articles/articles.py): 
 
 - Uses Regex and Spark to parse current Wikipedia articles 
-- Extracts relevant features like references, name, categories, and article length.
+- Extracts relevant features like references, name, categories, and article length
 
 
 ## 8.3 Parse Wikipedia edit history
 [edit_history.py](./src/dataprocessing/process_articles/edit_history.py): 
 
 - Uses Regex and Spark to parse historic Wikipedia meta-data 
-- Extracts relevant features like edits, reverts, timestamp, and username.
+- Extracts relevant features like edits, reverts, timestamp, and username
 
 ## 8.4 Run data analytics
 [wiki_analytics.sql](./src/analytics/wiki_analytics.sql): 
 
 - Uses SQL to calculate conflict score 
-- Matches conflict score with different features using aggregations.
+- Matches conflict score with different features using aggregations
 
 [timeseries.sql](./src/analytics/timeseries.sql): 
 

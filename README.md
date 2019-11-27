@@ -173,20 +173,24 @@ Post installation of all the components of the pipeline, it can be used in two w
 ![diagram](figs/db1.png)
 __Figure 1.__ Dashboard showing timeseries of the edit history
 
+
+![diagram](figs/Month.png)
+__Figure 2.__ Dashboard analysis by month
+
 ![diagram](figs/db2.png)
-__Figure 2.__ Dashboard analysis by article
+__Figure 3.__ Dashboard analysis by article
 
 ![diagram](figs/db_3.png)
-__Figure 3.__ Dashboard analyiss by domain
+__Figure 4.__ Dashboard analyiss by domain
 
 ![diagram](figs/db3.png)
-__Figure 4.__ Dashboard analysis by category
+__Figure 5.__ Dashboard analysis by category
 
 ![diagram](figs/db4.png)
-__Figure 5.__ Dashboard word cloud topic model
+__Figure 6.__ Dashboard word cloud topic model
 
 ![diagram](figs/db_5.png)
-__Figure 6.__ Search results
+__Figure 7.__ Search results
 
 # 11. Analytics
 

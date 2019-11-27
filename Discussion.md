@@ -16,7 +16,7 @@ Even though none of the most cited domains do not make it the list, websites wit
 Meanwhile the distribution of categories and conflict score showed greater mean variance and upper quartile variance for popular article categories. Therefore we consider that conflict is more influenced by categories and topics rather than the reference sources.
 
 <figure class="image">
-<img src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/Monthly_Metrics.png" data-canonical-src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/Monthly_Metrics.png" width="680" height="220" />
+<img src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/Monthly_Metrics.png" data-canonical-src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/Monthly_Metrics.png" width="680" height="320" />
   <figcaption> Figure 1. The bar chart above shows monthly reverts for August 2019, one of Source of Conflict Dashboard metrics. Users can select any month they want from Wikipedia data </figcaption>
 </figure> 
 

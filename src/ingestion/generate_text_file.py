@@ -31,15 +31,30 @@ files = []
 for file in soup_dump.find_all('li', {'class': 'file'}):
     text = file.text
     # Select the relevant files
-    if 'pages-meta-history' in text:
+    if 'stub-meta-history' in text:
         files.append((text.split()[0], text.split()[1:]))
         
-# files
-files_to_download = [file[0] for file in files if 'meta-history' in file[0]]
+# Download meta-stub historic Wikipedia
+files_to_download_historic = [file[0] for file in files if '.gz' in file[0]]
 
 url = 'https://dumps.wikimedia.org/enwiki/latest/'
-files_to_download_url = [url+ i for i in files_to_download]
+files_to_download_url = [url+ i for i in files_to_download_historic]
 
 with open('/home/ubuntu/Wiki_Bias/src/ingestion/enwiki-meta-history.txt', 'w+') as f:
+    for item in files_to_download_url:
+        f.write("%s\n" % item)
+
+# Download current Wikipedia
+for file in soup_dump.find_all('li', {'class': 'file'}):
+    text = file.text
+    # Select the relevant files
+    if 'pages-articles-multistream' in text:
+        files.append((text.split()[0], text.split()[1:]))
+
+# files
+files_to_download_current = [file[0] for file in files if '.bz2' in file[0]]
+files_to_download_url = [url+ i for i in files_to_download_current]
+
+with open('/home/ubuntu/Wiki_Bias/src/ingestion/enwiki-pages-mutlistream.txt', 'w+') as f:
     for item in files_to_download_url:
         f.write("%s\n" % item)

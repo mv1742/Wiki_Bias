@@ -127,6 +127,7 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 
 ## 8.4 Run data analytics
 [wiki_analytics.sql](./src/analytics/wiki_analytics.sql)
+
 [timeseries.sql](./src/analytics/timeseries.sql)
 
 
@@ -157,13 +158,13 @@ Post installation of all the components of the pipeline, it can be used in two w
 
 ### 9.2.3 SQL joins and analytics
 
-`cd $HOME/Wiki_Bias/src/analytics`
+`cd ~/Wiki_Bias/src/analytics`
 
 `./run_analytics.sh`
 
 ### 9.2.4 Run Flask app
 
-`cd $HOME/Wiki_Bias/src/flask`
+`cd ~/Wiki_Bias/src/flask`
 
 `python wsgi.py`
 
@@ -173,21 +174,32 @@ Post installation of all the components of the pipeline, it can be used in two w
 ![diagram](figs/db1.png)
 __Figure 1.__ Dashboard showing timeseries of the edit history
 
+-----
 
 ![diagram](figs/Month.png)
 __Figure 2.__ Dashboard analysis by month
 
+-----
+
 ![diagram](figs/db2.png)
 __Figure 3.__ Dashboard analysis by article
+
+-----
 
 ![diagram](figs/db_3.png)
 __Figure 4.__ Dashboard analyiss by domain
 
+-----
+
 ![diagram](figs/db3.png)
 __Figure 5.__ Dashboard analysis by category
 
+-----
+
 ![diagram](figs/db4.png)
 __Figure 6.__ Dashboard word cloud topic model
+
+-----
 
 ![diagram](figs/db_5.png)
 __Figure 7.__ Search results
@@ -213,8 +225,8 @@ __Figure 7.__ Search results
 
 ## 12.2 Spark tuning
 
-Edit Spark configuration file /usr/local/spark/conf/spark-defaults.conf
-[how-to-tune-your-apache-spark-jobs-part-2](https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-2/):
+Edit Spark configuration file /usr/local/spark/conf/spark-defaults.conf . See 
+[how-to-tune-your-apache-spark-jobs-part-2](https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-2/) for more information. Below is a sample setup:
 
 ```
 spark.driver.memory                4G 

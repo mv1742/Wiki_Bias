@@ -13,22 +13,8 @@ def create_app():
                            template='home-template',
                            body="Insight Data Engineering NY Project")
 
-    # @app.route('/')
-    # def my_form():
-    #     return render_template('my-form.html', title='Source to Conflict.',
-    #                        template='home-template',
-    #                        body="Insight Data Engineering NY Project")
-    #
-    # # @app.route('/', methods=['POST'])
-    # # def my_form_post():
-    # #     text = request.form['text']
-    # #     processed_text = text.upper()
-    # #     return processed_text
     with app.app_context():
 
-        # Import main Blueprint
-        # from . import routes
-        # app.register_blueprint(routes.main_bp)
         from .dash_application import analytics
         app = analytics.Add_Dash(app)
         from .dash_application import categories

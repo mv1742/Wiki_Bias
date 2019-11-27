@@ -9,6 +9,7 @@ html_layout = '''<!DOCTYPE html>
                         <body>
                             <nav>
   <a href="/"><i class="fas fa-home"></i> Home</a>
+              <a href="/month/"><i class="fas fa-chart-line"></i> Month </a>
         <a href="/timeseries/"><i class="fas fa-chart-line"></i> Time Series </a>
            <a href="/articles/"><i class="fas fa-chart-line"></i> Articles </a>
     <a href="/analytics/"><i class="fas fa-chart-line"></i> Domains</a>

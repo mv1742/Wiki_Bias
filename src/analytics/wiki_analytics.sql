@@ -1,4 +1,4 @@
-1. S2Conflict
+#1. S2Conflict
 
 CREATE TABLE wikirefs (
 id serial PRIMARY KEY,
@@ -17,7 +17,7 @@ RENAME COLUMN "sum(nofedits)" TO nofedits;
 
 CREATE TABLE conflict AS SELECT *, CAST(reverts AS float)/nofedits as ratio FROM article_conflict;
 
-EXPLAIN ANALYZE CREATE table s2conflict AS SELECT * FROM table_references LEFT JOIN conflict ON(table_references.id=conflict.entity_id)
+CREATE table s2conflict AS SELECT * FROM table_references LEFT JOIN conflict ON(table_references.id=conflict.entity_id)
 ORDER BY ratio;
 
 # 2. Table Groupby_Article
@@ -65,9 +65,9 @@ WITH bounds AS (
 select * FROM s2conflict_urls_with_edit_history
 where reverts > (SELECT av_reverts FROM bounds);
 
-#ALL: SELECT 15270784, ABOVE REV AVERAGE: SELECT 1947902.
+# ALL: SELECT 15270784, ABOVE REV AVERAGE: SELECT 1947902.
 
-s2c_large_edits 
+# s2c_large_edits
 #SELECT round(AVG(ratio)) as avg, MIN(ratio), MAX(ratio) FROM s2c_large_edits;
 #        avg         |         min         |        max        |    stddev_samp     |       stddev       |     stddev_pop
 #--------------------+---------------------+-------------------+--------------------+--------------------+--------------------
@@ -82,7 +82,7 @@ select distinct(host), count(host), CAST(AVG(reverts) AS FLOAT)
   where host != ''
   group by host
   order by count desc;
-SELECT 1091137
+# SELECT 1091137
 
 
 CREATE table Groupby_url_ratio AS
@@ -141,7 +141,6 @@ WITH bounds AS (
 select *, (case when (avg < (SELECT lower_bound FROM bounds)) then 1 when (avg > (SELECT lower_bound FROM bounds) and avg < (SELECT med_low_bound FROM BOUNDS)) then 2
 			when (avg > (SELECT med_low_bound FROM BOUNDS) and avg < (SELECT upper_bound FROM BOUNDS)) then 3 when (avg > (SELECT upper_bound FROM BOUNDS)) then 4 end) as rating
 from Groupby_url_reverts_relevant;
-
 
 CREATE table Source_Score_ratio AS
 WITH bounds AS (

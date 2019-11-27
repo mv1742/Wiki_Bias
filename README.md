@@ -100,6 +100,9 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
         1.2 Number of edits
         1.3 Username
         1.4 Timestamp
+        1.5 Monthly rate of change
+        1.6 Dayly rate of change
+        1.7 Yearly rate of change
     2. Domain information
         2.1 Domain
         2.2 Url
@@ -123,7 +126,9 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 [edit_history.py](./src/dataprocessing/process_articles/edit_history.py)
 
 ## 8.4 Run data analytics
-[analytics](./src/analytics/wiki_analytics.sql)
+[wiki_analytics.sql](./src/analytics/wiki_analytics.sql)
+[timeseries.sql](./src/analytics/timeseries.sql)
+
 
 # 9. Getting started
 

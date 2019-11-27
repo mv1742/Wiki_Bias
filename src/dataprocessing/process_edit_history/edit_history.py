@@ -53,8 +53,8 @@ def count_bots_ind(username):
         pass
     return bots_count
 
-def get_reverts_article(wikipedia):
-    article_edit = wikipedia.filter("ns = '0'")
+def get_reverts_article(wikipedia,filter_date):
+    article_edit = wikipedia.filter("ns = '0'", "REVISION.TIMESTAMP >"+str(filter_date))
     article_edit.createTempView('article')
     article_edit = spark.sql("SELECT ID AS ENTITY_ID, TITLE AS ENTITY_TITLE, REVISION AS REVISION, REVISION.ID AS REVISIONIDS, REVISION.CONTRIBUTOR.USERNAME AS USERNAME, REVISION.COMMENT._VALUE AS COMMENT FROM article")
     find_reverts_udf = udf(count_reverts, IntegerType())  # type: object
@@ -93,13 +93,13 @@ def write2postgres(df, table):
 if __name__ == '__main__':
     file_name = sys.argv[1]
     postgres_table_name_talk = sys.argv[2]
-    postgres_table_name_article = sys.argv[3]
+    filter_date = sys.argv[3]
     num_file = sys.argv[4]
     spark = SparkSession.builder.getOrCreate()
     file = "s3a://wikibuckets/stub/enwiki-20190901-stub-meta-history"+str(num_file)+".xml"
     wikipedia = spark.read.format('xml') \
         .options(rowTag='page').load(file)
     # Parse articles
-    references_dataframe_article = get_reverts_article(wikipedia)
+    references_dataframe_article = get_reverts_article(wikipedia,filter_date)
     df =references_dataframe_article
     write2postgres(df = references_dataframe_article, table = postgres_table_name_article)

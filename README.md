@@ -225,7 +225,7 @@ __Figure 7.__ Search results
 
 ## 12.2 Spark tuning
 
-Edit Spark configuration file /usr/local/spark/conf/spark-defaults.conf . See 
+Edit Spark configuration file /usr/local/spark/conf/spark-defaults.conf . Refer to the blog post 
 [how-to-tune-your-apache-spark-jobs-part-2](https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-2/) for more information. Below is a sample setup:
 
 ```

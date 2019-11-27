@@ -123,22 +123,27 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 ## 8.2 Parse Wikipedia articles
 [articles.py](./src/dataprocessing/process_articles/articles.py): 
 
-- Uses Regex and Spark to Parse current Wikipedia articles and extracts relevant features like references, name, categories, and article length.
+- Uses Regex and Spark to Parse current Wikipedia articles 
+- Extracts relevant features like references, name, categories, and article length.
 
 
 ## 8.3 Parse Wikipedia edit history
 [edit_history.py](./src/dataprocessing/process_articles/edit_history.py): 
 
-- Uses Regex and Spark to Parse historice Wikipedia meta-data and extracts relevant features like edits, reverts, timestamp, and username.
+- Uses Regex and Spark to Parse historice Wikipedia meta-data 
+- Extracts relevant features like edits, reverts, timestamp, and username.
 
 ## 8.4 Run data analytics
 [wiki_analytics.sql](./src/analytics/wiki_analytics.sql): 
 
-- Uses SQL to calculate conflict score and matches conflict score with different features.
+- Uses SQL to calculate conflict score 
+- Matches conflict score with different features.
 
 [timeseries.sql](./src/analytics/timeseries.sql): 
 
-- Uses SQL window functions to calculate rate of change per month, day and year and aggregates cumulative timeseries data.
+- Uses SQL window functions to calculate rate of change per month, day, and year 
+- Aggregates cumulative timeseries data
+- Creates TimescaleDB partition to optimize query time
 
 
 # 9. Getting started

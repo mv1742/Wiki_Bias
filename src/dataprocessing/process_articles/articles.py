@@ -2,25 +2,11 @@ import os
 import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.types import *
-from pyspark.sql.functions import explode
-from pyspark import SparkContext
-from pyspark.sql import SQLContext
 from pyspark.sql.types import TimestampType, ArrayType, StringType
 from pyspark.sql.functions import col, size, explode, isnull, udf, desc
-# from mwcites.extractors import arxiv, doi, isbn, pubmed
-# import export2postgres
 import re
-import pyspark.sql
 from pyspark.sql import *
-# import pandas as pd
-# import matplotlib.pyplot as plt
-# import hashlib
 import os.path
-# from datetime import timedelta, date
-# import hashlib
-from urllib.parse import urlparse
-# import pyspark.sql.functions as sf
-from operator import add
 import time
 
 # Parse articles to obtain references, infobox, length, and categories

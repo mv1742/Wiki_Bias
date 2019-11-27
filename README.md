@@ -116,19 +116,29 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 
 # 8. Methodology
 ## 8.1 Data collection:
-[generate_text_file.py](./src/ingestion/generate_text_file.py): Uses the BeautifulSoup package to parse the urls on the stackexchange data dump to retrieve the urls of the .7z files of all the wikipedia dump.
+[generate_text_file.py](./src/ingestion/generate_text_file.py): 
+
+- Uses the BeautifulSoup package to parse the urls on the stackexchange data dump to retrieve the urls of the .7z files of all the wikipedia dump.
 
 ## 8.2 Parse Wikipedia articles
-[articles.py](./src/dataprocessing/process_articles/articles.py)
+[articles.py](./src/dataprocessing/process_articles/articles.py): 
+
+- Uses Regex and Spark to Parse current Wikipedia articles and extracts relevant features like references, name, categories, and article length.
 
 
 ## 8.3 Parse Wikipedia edit history
-[edit_history.py](./src/dataprocessing/process_articles/edit_history.py)
+[edit_history.py](./src/dataprocessing/process_articles/edit_history.py): 
+
+- Uses Regex and Spark to Parse historice Wikipedia meta-data and extracts relevant features like edits, reverts, timestamp, and username.
 
 ## 8.4 Run data analytics
-[wiki_analytics.sql](./src/analytics/wiki_analytics.sql)
+[wiki_analytics.sql](./src/analytics/wiki_analytics.sql): 
 
-[timeseries.sql](./src/analytics/timeseries.sql)
+- Uses SQL to calculate conflict score and matches conflict score with different features.
+
+[timeseries.sql](./src/analytics/timeseries.sql): 
+
+- Uses SQL window functions to calculate rate of change per month, day and year and aggregates cumulative timeseries data.
 
 
 # 9. Getting started

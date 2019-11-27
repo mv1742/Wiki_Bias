@@ -15,7 +15,7 @@
 # 1. Conflict Score
 Conflict is defined by number of reverted articles normalized by total edits and article length. The conflict scores are first standarized and then added. The resulting distribution is then divided into 5 levels of conflict, 1 indicating less conflictive and 5 more conflictive.
 
-<img src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/Conflict_Score.png" data-canonical-src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/Conflict_Score.png" width="380" height="220" />
+<img src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/Conflict_Score.png" data-canonical-src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/Conflict_Score.png" width="680" height="220" />
 
 # 2. Relevant Findings
 

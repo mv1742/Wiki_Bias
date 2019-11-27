@@ -117,14 +117,12 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 [generate_text_file.py](./src/ingestion/generate_text_file.py): 
 
 - Uses the BeautifulSoup package to parse the urls on the stackexchange data dump to retrieve the urls of the .7z files of all the wikipedia dump.
-- Uses the BeautifulSoup package to parse the urls on the stackexchange data dump to retrieve the urls of the .7z files of all the wikipedia dump
 
 ## 8.2 Parse Wikipedia articles
 [articles.py](./src/dataprocessing/process_articles/articles.py): 
 
 - Uses Regex and Spark to Parse current Wikipedia articles 
 - Extracts relevant features like references, name, categories, and article length.
-- Extracts relevant features like references, name, categories, and article length
 
 
 ## 8.3 Parse Wikipedia edit history
@@ -132,7 +130,6 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 
 - Uses Regex and Spark to Parse historice Wikipedia meta-data 
 - Extracts relevant features like edits, reverts, timestamp, and username.
-- Extracts relevant features like edits, reverts, timestamp, and username
 
 ## 8.4 Run data analytics
 [wiki_analytics.sql](./src/analytics/wiki_analytics.sql): 

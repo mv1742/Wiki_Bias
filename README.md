@@ -25,7 +25,7 @@
 
 # 1. Introduction
 Source of Conflict is a tool for Wikipedia users and moderators to analyze how some features affect the edit history. I calculate different metrics for and identify which metrics lead to more edits. Conflict is defined by number of reverted articles normalized by total edits and article length. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots. Currently conflictive articles in Wikipedia are manually protected by moderators when necessary. Future work will focus on automating the article protection in Wikipedia using machine learning.
-Read further discussion [here](https://github.com/mv1742/Wiki_Bias/Discussion.md). 
+Read further discussion [here](https://github.com/mv1742/Wiki_Bias/blob/master/Discussion.md). 
 
 # 2. Motivation
 - Wikipedia needs a metric to quantify the bias of its articles.
@@ -114,17 +114,36 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 
 # 8. Methodology
 ## 8.1 Data collection:
-[generate_text_file.py](./src/ingestion/generate_text_file.py): Uses the BeautifulSoup package to parse the urls on the stackexchange data dump to retrieve the urls of the .7z files of all the wikipedia dump.
+[generate_text_file.py](./src/ingestion/generate_text_file.py): 
+
+- Uses the BeautifulSoup package to parse the urls on the stackexchange data dump to retrieve the urls of the .7z files of all the wikipedia dump.
+- Uses the BeautifulSoup package to parse the urls on the stackexchange data dump to retrieve the urls of the .7z files of all the wikipedia dump
 
 ## 8.2 Parse Wikipedia articles
-[articles.py](./src/dataprocessing/process_articles/articles.py)
+[articles.py](./src/dataprocessing/process_articles/articles.py): 
+
+- Uses Regex and Spark to Parse current Wikipedia articles 
+- Extracts relevant features like references, name, categories, and article length.
+- Extracts relevant features like references, name, categories, and article length
 
 
 ## 8.3 Parse Wikipedia edit history
-[edit_history.py](./src/dataprocessing/process_articles/edit_history.py)
+[edit_history.py](./src/dataprocessing/process_articles/edit_history.py): 
+
+- Uses Regex and Spark to Parse historice Wikipedia meta-data 
+- Extracts relevant features like edits, reverts, timestamp, and username.
+- Extracts relevant features like edits, reverts, timestamp, and username
 
 ## 8.4 Run data analytics
-[analytics](./src/analytics/wiki_analytics.sql)
+[wiki_analytics.sql](./src/analytics/wiki_analytics.sql): 
+
+- Uses SQL to calculate conflict score 
+- Matches conflict score with different features using aggregations.
+
+[timeseries.sql](./src/analytics/timeseries.sql): 
+
+- Uses SQL window functions to calculate rate of change per month, day, and year 
+- Creates TimescaleDB partition to optimize query time
 
 # 9. Getting started
 

@@ -6,6 +6,7 @@
 
 <img src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/SoC.png" data-canonical-src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/SoC.png" width="180" height="120" />
 
+
 1. [Conflict Score](README.md#1.-Conflict-Score)
 1. [Relevant Findings](README.md#2.-Relevant-Findings)
 1. [Discussion](README.md#3.-Discussion)
@@ -13,6 +14,8 @@
 
 # 1. Conflict Score
 Source of Conflict is a tool for Wikipedia users and moderators to analyze how some features affect the edit history. I calculate different metrics for and identify which metrics lead to more edits. Conflict is defined by number of reverted articles normalized by total edits and article length. Other features include categories, diversity of references, type of reference, domain, number of edits done by bots. Currently conflictive articles in Wikipedia are manually protected by moderators when necessary. Future work will focus on automating the article protection in Wikipedia using machine learning.
+
+<img src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/Conflict_Score.png" data-canonical-src="https://raw.githubusercontent.com/mv1742/Wiki_Bias/master/figs/Conflict_Score.png" width="380" height="220" />
 
 # 2. Relevant Findings
 

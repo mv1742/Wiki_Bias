@@ -110,7 +110,7 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
         3.2 Sub-categories
     4. Other data
         4.1 Article length
-        4.2 Links from article
+        4.2 Number of links from article
 
 # 8. Methodology
 ## 8.1 Data collection:
@@ -121,14 +121,14 @@ See all available datasets [here](https://dumps.wikimedia.org/backup-index.html)
 ## 8.2 Parse Wikipedia articles
 [articles.py](./src/dataprocessing/process_articles/articles.py): 
 
-- Uses Regex and Spark to Parse current Wikipedia articles 
+- Uses Regex and Spark to parse current Wikipedia articles 
 - Extracts relevant features like references, name, categories, and article length.
 
 
 ## 8.3 Parse Wikipedia edit history
 [edit_history.py](./src/dataprocessing/process_articles/edit_history.py): 
 
-- Uses Regex and Spark to Parse historice Wikipedia meta-data 
+- Uses Regex and Spark to parse historic Wikipedia meta-data 
 - Extracts relevant features like edits, reverts, timestamp, and username.
 
 ## 8.4 Run data analytics
@@ -149,7 +149,7 @@ Post installation of all the components of the pipeline, it can be used in two w
 
 ` cp ~/Wiki_Bias/src/airflow/de_dag.py ~/airflow/de_dag.py`
  
-` python de_dag.py`
+` python3 de_dag.py`
   
 ## 9.2 Run the following scripts:
 
@@ -169,36 +169,39 @@ Post installation of all the components of the pipeline, it can be used in two w
 
 ### 9.2.3 SQL joins and analytics
 
-`cd $HOME/Wiki_Bias/src/analytics`
+`cd ~/Wiki_Bias/src/analytics`
 
 `./run_analytics.sh`
 
 ### 9.2.4 Run Flask app
 
-`cd $HOME/Wiki_Bias/src/flask`
+`cd ~/Wiki_Bias/src/flask`
 
-`python wsgi.py`
+`python3 wsgi.py`
 
 
 # 10. Dashboard
 
 ![diagram](figs/db1.png)
-__Figure 1.__ Dashboard showing timeseries of the edit history
+__Figure 1.__ Dashboard showing time-series of the edit history
+
+![diagram](figs/Month.png)
+__Figure 2.__ Dashboard monthly top articles
 
 ![diagram](figs/db2.png)
-__Figure 2.__ Dashboard analysis by article
+__Figure 3.__ Dashboard overall top articles
 
 ![diagram](figs/db_3.png)
-__Figure 3.__ Dashboard analyiss by domain
+__Figure 4.__ Dashboard overall top domains
 
 ![diagram](figs/db3.png)
-__Figure 4.__ Dashboard analysis by category
+__Figure 5.__ Dashboard overall top categories
 
 ![diagram](figs/db4.png)
-__Figure 5.__ Dashboard word cloud topic model
+__Figure 6.__ Dashboard word cloud topic model
 
 ![diagram](figs/db_5.png)
-__Figure 6.__ Search results
+__Figure 7.__ Search results
 
 # 11. Analytics
 
@@ -221,8 +224,9 @@ __Figure 6.__ Search results
 
 ## 12.2 Spark tuning
 
-Edit Spark configuration file /usr/local/spark/conf/spark-defaults.conf
-[how-to-tune-your-apache-spark-jobs-part-2](https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-2/):
+Edit Spark configuration file /usr/local/spark/conf/spark-defaults.conf . See 
+[how-to-tune-your-apache-spark-jobs-part-2](https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-2/) for more information. 
+Below is a sample setup:
 
 ```
 spark.driver.memory                4G 
@@ -283,4 +287,3 @@ The directory structure looks like this:
             └── enwiki_meta_history.txt
 
 ```
-

@@ -11,7 +11,7 @@
 1. [Conflict_Score](README.md#1.-Conflict Score)
 1. [Relevant Findings](README.md#2.-Relevant-Findings)
 1. [Feature Importance](README.md#3.-Feature Importance)
-1. [Discussion](README.md#3.-Discussion)
+1. [Discussion](README.md#4.-Discussion)
 
 
 # 1. Conflict_Score
@@ -31,13 +31,13 @@ Meanwhile the distribution of categories and conflict score showed greater mean 
 Therefore it was concluded that conflict is more influenced by categories and topics rather than the reference sources. 
 
 
-# 4. Discussion
+# 3. Discussion
 
 This tool can be used by Wikipedia moderators to monitor contentious articles, potentially automate locking of conflictive articles, and identify recurrently cited sources in conflictive articles.
 
 Similarly, public users can understand edit history and conflict and create awareness of articles with higher risk of bias.
 
 
-# 5. Future Work
+# 4. Future Work
 Future work could work towards improving causal inference by looking at all the data from meta-history to analyze time-series, The conflict score can also be imporved. For example the Pagerank algorithm to differentiate popular articles. Statistical tests like KS test can be applied to compare distributions and test null hypothesis. In addition, locking conflictive articles can be automated using NLP models.
 

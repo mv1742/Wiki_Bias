@@ -23,10 +23,12 @@ where reverts > (SELECT upper_bound FROM bounds);
 CREATE materialized view groupby_articles_Score_ratios AS
 WITH bounds AS (
     SELECT (AVG(conflict_score) + STDDEV_SAMP(ratio)* 3) as upper_bound,
-	(AVG(conflict_score) + STDDEV_SAMP(conflict_score) * 2) as med_low_bound,
+	(AVG(conflict_score) + STDDEV_SAMP(conflict_score) * 2) as med_high_bound,
+	(AVG(conflict_score)) as med_bound
 	(AVG(conflict_score) - STDDEV_SAMP(conflict_score)  * 1) as lower_bound FROM groupby_article_len_relevant)
-select *, (case when (conflict_score < (SELECT lower_bound FROM bounds)) then 1 when (conflict_score > (SELECT lower_bound FROM bounds) and conflict_score < (SELECT med_low_bound FROM BOUNDS)) then 2
-			when (conflict_score > (SELECT med_low_bound FROM BOUNDS) and conflict_score < (SELECT upper_bound FROM BOUNDS)) then 3 when (conflict_score > (SELECT upper_bound FROM BOUNDS)) then 4 end) as rating_1
+select *, (case when (conflict_score < (SELECT lower_bound FROM bounds)) then 1 when (conflict_score > (SELECT lower_bound FROM bounds) and conflict_score < (SELECT med_bound FROM BOUNDS)) then 2
+			when (conflict_score > (SELECT med_bound FROM BOUNDS) and conflict_score < (SELECT med_high_bound FROM BOUNDS)) then 3 when (conflict_score > (SELECT med_high_bound FROM BOUNDS) and conflict_score < (SELECT upper_bound FROM BOUNDS)) then 4
+			when (conflict_score > (SELECT upper_bound FROM BOUNDS)) then 5 end) as rating
 from groupby_article_len_relevant;
 
 -- 3. Table Group by URL host

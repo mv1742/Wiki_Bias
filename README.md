@@ -8,19 +8,19 @@
 | Go to -> *[Presentation slides](https://docs.google.com/presentation/d/1uzJ4H3GOEt4qJk-HOeshhaqHc4EtusS9e92oKj92rIo/edit?usp=sharing)*      |  Go to ->  *[Demo @ dataangel.me](http://dataangel.me/80)*          |
 | ------------- |:-------------:|
 
-1. [Introduction](README.md#1.-Introduction)
-1. [Motivation](README.md#2.-Motivation)
-1. [Requirements](README.md#3.-Requirements)
-1. [Pipeline](README.md#4.-Pipeline)
-1. [Architecture](README.md#5.-Architecture)
-1. [Data Source](README.md#6.-Data-Source)
-1. [Metrics](README.md#7.-Metrics)
-1. [Methodology](README.md#8.-Methodology)
-1. [Getting Started](README.md#9.-Getting-Started)
-1. [Dashboard](README.md#10.-Dashboard)
-1. [Analytics](README.md#11.-Analytics)
-1. [Setup Notes](README.md#12.-Setup-Notes)
-1. [Repo-directory-structure](README.md#13.-Repo-directory-structure)
+1. [Introduction](README.md#-1.-Introduction)
+1. [Motivation](README.md#-2.-Motivation)
+1. [Requirements](README.md#-3.-Requirements)
+1. [Pipeline](README.md#-4.-Pipeline)
+1. [Architecture](README.md#-5.-Architecture)
+1. [Data Source](README.md#-6.-Data-Source)
+1. [Metrics](README.md#-7.-Metrics)
+1. [Methodology](README.md#-8.-Methodology)
+1. [Getting Started](README.md#-9.-Getting-Started)
+1. [Dashboard](README.md#-10.-Dashboard)
+1. [Analytics](README.md#-11.-Analytics)
+1. [Setup Notes](README.md#-12.-Setup-Notes)
+1. [Repo-directory-structure](README.md#-13.-Repo-directory-structure)
 
 
 # 1. Introduction

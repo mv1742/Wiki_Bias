@@ -24,7 +24,7 @@ decorator==4.4.0
 defusedxml==0.6.0
 docutils==0.15.2
 entrypoints==0.3
-Flask==1.1.1
+Flask==2.2.5
 Flask-Compress==1.4.0
 funcy==1.13
 future==0.17.1

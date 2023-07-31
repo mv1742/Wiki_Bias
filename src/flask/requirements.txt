@@ -9,7 +9,7 @@ dash-html-components==1.0.0
 dash-renderer==1.0.0
 dash-table==4.0.2
 decorator==4.4.0
-Flask==1.1.1
+Flask==2.2.5
 Flask-Assets==0.12
 Flask-Compress==1.4.0
 idna==2.8
@@ -65,7 +65,7 @@ decorator==4.4.0
 defusedxml==0.6.0
 docutils==0.15.2
 entrypoints==0.3
-Flask==1.1.1
+Flask==2.2.5
 Flask-Compress==1.4.0
 funcy==1.13
 future==0.17.1
